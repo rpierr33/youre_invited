@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #C9A96E;
+  --gold-light: #E8D5B0;
+  --gold-dark: #8B5E3C;
+  --navy: #1B3A4B;
+  --navy-light: #2A5A6E;
+  --navy-dark: #0F2530;
+  --sand: #E8D5B0;
+  --linen: #FAF7F2;
+  --charcoal: #2C2C2C;
+  --terracotta: #8B5E3C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--charcoal);
+  background-color: var(--linen);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Gold horizontal rule */
+.gold-rule {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 2rem auto;
+  max-width: 200px;
+}
+
+/* Grain texture overlay */
+.grain-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Float label animation */
+.float-label-group {
+  position: relative;
+}
+
+.float-label-group input:focus,
+.float-label-group input:not(:placeholder-shown),
+.float-label-group textarea:focus,
+.float-label-group textarea:not(:placeholder-shown),
+.float-label-group select:focus,
+.float-label-group select:valid {
+  border-color: var(--gold);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.2);
+}
+
+/* Underline grow on hover */
+.underline-grow {
+  position: relative;
+}
+
+.underline-grow::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.underline-grow:hover::after {
+  width: 100%;
+}
+
+/* Masonry grid */
+.masonry-grid {
+  columns: 3;
+  column-gap: 1rem;
+}
+
+.masonry-grid > * {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .masonry-grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .masonry-grid {
+    columns: 1;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--linen);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-dark);
+}
+
+/* Drop cap styling */
+.drop-cap::first-letter {
+  float: left;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  line-height: 0.8;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  color: var(--gold);
+  font-weight: 600;
+}
