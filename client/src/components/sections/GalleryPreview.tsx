@@ -1,52 +1,78 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver'
-import { SectionHeading } from '../ui/SectionHeading'
 import { galleryImages } from '../../lib/data'
 
 export function GalleryPreview() {
   const { ref, isVisible } = useIntersectionObserver()
-  const previewImages = galleryImages.slice(0, 9)
+  const images = galleryImages.slice(0, 6)
 
   return (
-    <section ref={ref} className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          subtitle="Our Portfolio"
-          title="Celebrations We've Crafted"
-          description="A glimpse into the unforgettable moments we've had the privilege to create across South Florida and beyond."
-        />
+    <section ref={ref} className="py-20 md:py-24 bg-warm">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+        {/* Header */}
+        <div className="flex items-end justify-between mb-10">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="gold-rule mb-4" />
+            <h2 className="font-cormorant text-[2rem] md:text-[2.5rem] font-light text-charcoal">
+              Selected Work
+            </h2>
+          </motion.div>
+          <Link
+            to="/gallery"
+            className="hidden sm:inline-flex items-center gap-2 font-body text-[0.75rem] tracking-[0.12em] uppercase text-charcoal hover:text-gold transition-colors mb-2"
+          >
+            View All <span>&rarr;</span>
+          </Link>
+        </div>
 
-        <div className="masonry-grid mt-12">
-          {previewImages.map((image, i) => (
-            <motion.div
-              key={image.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative group overflow-hidden rounded-xl"
-            >
+        {/* Image Grid — 2 large + 4 small */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {/* Large left */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="col-span-2 row-span-2"
+          >
+            <Link to="/gallery" className="block group overflow-hidden h-full">
               <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                style={{ aspectRatio: i % 3 === 0 ? '3/4' : i % 3 === 1 ? '4/3' : '1/1' }}
+                src={images[0].src}
+                alt={images[0].alt}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <span className="font-body text-sm text-white uppercase tracking-wider">
-                  {image.category}
-                </span>
-              </div>
+            </Link>
+          </motion.div>
+          {/* 4 smaller */}
+          {images.slice(1, 5).map((img, i) => (
+            <motion.div
+              key={img.id}
+              initial={{ opacity: 0, y: 15 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.15 + i * 0.08 }}
+            >
+              <Link to="/gallery" className="block group overflow-hidden">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                />
+              </Link>
             </motion.div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* Mobile "View All" link */}
+        <div className="sm:hidden text-center mt-8">
           <Link
             to="/gallery"
-            className="inline-block bg-gold text-white px-8 py-4 rounded-full font-body font-semibold uppercase tracking-wider hover:bg-gold-dark transition-colors duration-300"
+            className="inline-flex items-center gap-2 font-body text-[0.75rem] tracking-[0.12em] uppercase text-charcoal hover:text-gold transition-colors"
           >
-            View Full Gallery
+            View Full Gallery <span>&rarr;</span>
           </Link>
         </div>
       </div>

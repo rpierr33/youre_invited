@@ -1,64 +1,54 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver'
-import { BotanicalSvg } from '../ui/BotanicalSvg'
 
 export function AboutSnippet() {
   const { ref, isVisible } = useIntersectionObserver()
 
   return (
-    <section ref={ref} className="py-24 bg-linen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Image + Botanical */}
+    <section ref={ref} className="py-20 md:py-24 bg-white">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left: Image */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            className="relative"
+            transition={{ duration: 0.7 }}
           >
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
-                alt="You're Invited founder planning an event"
-                className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover"
-              />
-              <div className="absolute -bottom-8 -right-8 w-40 h-40 opacity-20 text-gold">
-                <BotanicalSvg variant="hibiscus" className="w-full h-full" />
-              </div>
-              <div className="absolute -top-6 -left-6 w-32 h-32 opacity-15 text-gold">
-                <BotanicalSvg variant="leaf" className="w-full h-full" />
-              </div>
-            </div>
+            <img
+              src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=700&q=80"
+              alt="Elegant wedding venue with tropical floral arrangements"
+              className="w-full aspect-[4/5] object-cover"
+            />
           </motion.div>
 
           {/* Right: Copy */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.15 }}
           >
-            <span className="font-script text-2xl text-gold">Our Story</span>
-            <h2 className="font-playfair text-3xl md:text-4xl font-semibold text-charcoal mt-2 mb-6">
-              Rooted in Fort Lauderdale,
-              <br />Inspired by You
+            <div className="gold-rule mb-6" />
+            <h2 className="font-cormorant text-[2rem] md:text-[2.5rem] font-light text-charcoal leading-[1.2] mb-6">
+              Where South Florida's <br className="hidden md:block" />
+              <span className="italic text-gold">Most Beautiful</span> Moments Begin
             </h2>
-            <div className="gold-rule !text-left !ml-0" />
-            <p className="font-body text-charcoal/70 leading-relaxed mb-6">
-              For over 15 years, You're Invited has been the heartbeat of celebration in South Florida.
-              Founded on the belief that every event should feel as unique as the people at its center,
-              we bring warmth, creativity, and meticulous attention to every detail.
+            <p className="font-body text-warm-gray text-[0.9375rem] leading-[1.8] mb-5">
+              Renowned as one of the most sought-after event planners in South Florida,
+              You're Invited brings to life unexpected, imaginative, and uniquely personal
+              celebrations for clients across the globe.
             </p>
-            <p className="font-body text-charcoal/70 leading-relaxed mb-8">
-              From sunset ceremonies along the Intracoastal Waterway to elegant galas on Las Olas Boulevard,
-              we know Fort Lauderdale like no one else. This is our home — and we pour that love into every
-              celebration we create.
+            <p className="font-body text-warm-gray text-[0.9375rem] leading-[1.8] mb-8">
+              With over 15 years rooted in Fort Lauderdale — from sunset ceremonies along the
+              Intracoastal to elegant galas on Las Olas Boulevard — we craft events that feel
+              as warm and extraordinary as the people at their center.
             </p>
             <Link
               to="/about"
-              className="inline-block font-body text-gold font-semibold uppercase tracking-wider underline-grow hover:text-gold-dark transition-colors"
+              className="inline-flex items-center gap-3 font-body text-[0.75rem] tracking-[0.15em] uppercase text-charcoal border-b border-charcoal/30 pb-1 hover:border-gold hover:text-gold transition-all duration-300"
             >
-              Learn More About Us &rarr;
+              Meet Our Team
+              <span>&rarr;</span>
             </Link>
           </motion.div>
         </div>

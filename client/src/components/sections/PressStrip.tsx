@@ -1,33 +1,29 @@
-import { motion } from 'framer-motion'
-import { useIntersectionObserver } from '../../hooks/useIntersectionObserver'
-import { pressLogos } from '../../lib/data'
+const eventTypes = [
+  'Weddings',
+  'Corporate Events',
+  'Galas & Fundraisers',
+  'Destination Events',
+  'Quinceañeras',
+  'Social Celebrations',
+  'Anniversaries',
+  'Mitzvahs',
+]
 
 export function PressStrip() {
-  const { ref, isVisible } = useIntersectionObserver()
+  const items = [...eventTypes, ...eventTypes]
 
   return (
-    <section ref={ref} className="py-16 bg-sand/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={isVisible ? { opacity: 1 } : {}}
-          className="text-center font-body text-sm uppercase tracking-[0.2em] text-charcoal/40 mb-8"
-        >
-          As Seen In
-        </motion.p>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-          {pressLogos.map((logo, i) => (
-            <motion.span
-              key={logo}
-              initial={{ opacity: 0, y: 10 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="font-cormorant text-xl md:text-2xl text-charcoal/30 font-semibold italic"
-            >
-              {logo}
-            </motion.span>
-          ))}
-        </div>
+    <section className="border-y border-border py-4 overflow-hidden">
+      <div className="press-ticker flex whitespace-nowrap">
+        {items.map((item, i) => (
+          <span
+            key={`${item}-${i}`}
+            className="inline-flex items-center px-8 font-body text-[0.6875rem] tracking-[0.2em] uppercase text-warm-gray"
+          >
+            {item}
+            <span className="ml-8 text-gold">&#9830;</span>
+          </span>
+        ))}
       </div>
     </section>
   )

@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
-import { SectionHeading } from '../components/ui/SectionHeading'
 import { services } from '../lib/data'
 import { ContactCta } from '../components/sections/ContactCta'
 
@@ -12,32 +11,28 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7 }}
-      className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${!isEven ? 'lg:direction-rtl' : ''}`}
+      className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center`}
     >
       <div className={isEven ? '' : 'lg:order-2'}>
-        <div className="overflow-hidden rounded-2xl shadow-lg group">
+        <div className="overflow-hidden">
           <img
             src={service.image}
             alt={service.title}
-            className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
+            className="w-full aspect-[4/5] object-cover"
           />
         </div>
       </div>
       <div className={isEven ? '' : 'lg:order-1'}>
-        <h3 className="font-playfair text-2xl md:text-3xl font-semibold text-charcoal mb-4">{service.title}</h3>
-        <div className="gold-rule !ml-0 !text-left !max-w-[100px]" />
-        <p className="font-body text-charcoal/70 leading-relaxed mb-6">{service.description}</p>
+        <h3 className="font-cormorant text-[2rem] font-light text-charcoal mb-6">{service.title}</h3>
+        <p className="font-body text-[0.9375rem] text-warm-gray leading-[1.8] mb-8">{service.description}</p>
         <div className="mb-8">
-          <p className="font-body text-sm uppercase tracking-wider text-charcoal/40 mb-3">Planning Tiers</p>
-          <div className="flex flex-wrap gap-2">
+          <p className="font-body text-[0.6875rem] tracking-[0.15em] uppercase text-warm-gray mb-3">Planning Tiers</p>
+          <div className="flex flex-wrap gap-x-6 gap-y-1">
             {service.tiers.map((tier) => (
-              <span
-                key={tier}
-                className="px-4 py-2 rounded-full border border-gold/30 font-body text-sm text-gold-dark bg-gold/5"
-              >
+              <span key={tier} className="font-cormorant text-[1.0625rem] text-charcoal">
                 {tier}
               </span>
             ))}
@@ -45,9 +40,10 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         </div>
         <Link
           to="/contact"
-          className="inline-block bg-gold text-white px-6 py-3 rounded-full font-body font-semibold uppercase tracking-wider text-sm hover:bg-gold-dark transition-colors duration-300"
+          className="inline-flex items-center gap-3 font-body text-[0.75rem] tracking-[0.15em] uppercase text-charcoal border-b border-charcoal pb-1 hover:opacity-50 transition-opacity"
         >
           Request a Quote
+          <span>&rarr;</span>
         </Link>
       </div>
     </motion.div>
@@ -58,35 +54,32 @@ export function Services() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center grain-overlay">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&q=80')` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
-        <div className="relative z-10 text-center px-4">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="font-playfair text-4xl md:text-6xl font-bold text-white mb-4"
-          >
+      <section className="pt-[76px]">
+        <div className="w-full h-[50vh] min-h-[350px] max-h-[600px] overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&q=80"
+            alt="Luxury wedding reception"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </section>
+
+      {/* Title */}
+      <section className="py-20 bg-white text-center">
+        <div className="max-w-[700px] mx-auto px-6">
+          <h1 className="font-cormorant text-[2.5rem] md:text-[3.5rem] font-light text-charcoal leading-[1.15]">
             Our Services
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-body text-xl text-white/80 max-w-2xl mx-auto"
-          >
-            From intimate gatherings to grand celebrations, we offer comprehensive event planning tailored to your vision
-          </motion.p>
+          </h1>
+          <p className="font-body text-warm-gray text-[0.9375rem] leading-relaxed mt-5">
+            From intimate gatherings to grand celebrations, we offer comprehensive
+            event planning tailored to your vision.
+          </p>
         </div>
       </section>
 
       {/* Services List */}
-      <section className="py-24 bg-linen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+      <section className="pb-28 bg-white">
+        <div className="max-w-[1100px] mx-auto px-6 lg:px-12 space-y-28">
           {services.map((service, i) => (
             <ServiceCard key={service.id} service={service} index={i} />
           ))}
