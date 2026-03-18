@@ -7,6 +7,8 @@ const eventTypes = [
   'Social Celebrations',
   'Anniversaries',
   'Mitzvahs',
+  'Custom Invitations',
+  'Workshops & Courses',
 ]
 
 export function PressStrip() {

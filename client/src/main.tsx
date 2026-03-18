@@ -8,6 +8,7 @@ import { Services } from './pages/Services'
 import { Gallery } from './pages/Gallery'
 import { Testimonials } from './pages/Testimonials'
 import { Contact } from './pages/Contact'
+import { Invitations } from './pages/Invitations'
 import { Login } from './pages/Login'
 import { Admin } from './pages/Admin'
 import { ScrollToTop } from './components/layout/ScrollToTop'
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/invitations" element={<Invitations />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path="/contact" element={<Contact />} />

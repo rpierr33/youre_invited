@@ -17,13 +17,21 @@ export function Footer() {
           <div>
             <p className="font-body text-[0.6875rem] tracking-[0.15em] uppercase text-white/30 mb-4">Navigate</p>
             <div className="flex flex-col gap-2.5">
-              {['/', '/about', '/services', '/gallery', '/testimonials', '/contact'].map((path) => (
+              {[
+                { path: '/', label: 'Home' },
+                { path: '/about', label: 'About' },
+                { path: '/services', label: 'Services' },
+                { path: '/invitations', label: 'Invitations' },
+                { path: '/gallery', label: 'Gallery' },
+                { path: '/testimonials', label: 'Testimonials' },
+                { path: '/contact', label: 'Contact' },
+              ].map(({ path, label }) => (
                 <Link
                   key={path}
                   to={path}
                   className="font-body text-[0.8125rem] text-white/60 hover:text-gold transition-colors"
                 >
-                  {path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+                  {label}
                 </Link>
               ))}
             </div>

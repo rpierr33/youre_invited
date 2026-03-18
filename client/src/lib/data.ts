@@ -70,10 +70,10 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: 6,
-    quote: "Our charity gala raised more than double our goal, and I credit the atmosphere that You're Invited created. The venue at the Ritz was transformed into something out of a magazine. Donors were so moved by the experience that pledges poured in all night.",
-    name: 'Margaret Chen',
-    eventType: 'Fundraiser Gala',
-    eventDate: 'March 2024',
+    quote: "The custom invitation suite You're Invited designed for our wedding was a work of art. Hand-painted florals, gold foil, a custom wax seal — our guests said it was the most beautiful invitation they'd ever received. It set the tone for the entire celebration.",
+    name: 'Margaret & Thomas Chen',
+    eventType: 'Wedding Invitations',
+    eventDate: 'March 2025',
     rating: 5,
   },
 ]
@@ -141,6 +141,80 @@ export const services: Service[] = [
     description: 'Anniversaries, milestone birthdays, engagement parties, holiday soirées — life is full of moments worth celebrating. We bring the same intentionality and design excellence to every social gathering, creating experiences that feel both effortless and unforgettable.',
     tiers: ['Consultation', 'Day-Of Coordination', 'Full Planning'],
     image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80',
+  },
+]
+
+export const invitationTypes = [
+  {
+    id: 'wedding',
+    title: 'Wedding Suites',
+    description: 'Complete invitation suites including save-the-dates, formal invitations, RSVP cards, detail cards, menus, programs, and thank-you notes. Every piece designed to tell your love story.',
+    image: 'https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&q=80',
+    features: ['Custom illustration & calligraphy', 'Letterpress & foil stamping', 'Wax seals & ribbon details', 'Envelope liners & custom stamps'],
+  },
+  {
+    id: 'corporate',
+    title: 'Corporate & Gala',
+    description: 'Sophisticated invitations that reflect your brand identity. From black-tie gala invitations to product launch announcements, designed to command attention and set the tone for your event.',
+    image: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80',
+    features: ['Brand-aligned design', 'Multi-event series packages', 'VIP & tiered invitation sets', 'Digital companion designs'],
+  },
+  {
+    id: 'social',
+    title: 'Social & Milestone',
+    description: 'Birthday milestones, quinceañeras, mitzvahs, anniversaries, baby showers — every celebration deserves an invitation that excites guests before they even arrive.',
+    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&q=80',
+    features: ['Custom themes & illustrations', 'Photo integration', 'Bilingual designs', 'Matching party stationery'],
+  },
+  {
+    id: 'digital',
+    title: 'Digital Invitations',
+    description: 'Modern, animated digital invitations perfect for today\'s connected world. Beautiful designs that land right in your guests\' inboxes and phones — with built-in RSVP tracking.',
+    image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80',
+    features: ['Animated & interactive designs', 'RSVP tracking & guest management', 'Social media-ready formats', 'Matching digital stationery suite'],
+  },
+]
+
+export const workshopTypes = [
+  {
+    id: 'letterpress',
+    title: 'Letterpress & Print Workshop',
+    description: 'A hands-on studio experience in Fort Lauderdale where you\'ll learn the art of letterpress printing, foil stamping, and fine paper crafting. Walk away with your own set of custom-printed invitations.',
+    format: 'In-Person',
+    location: 'Fort Lauderdale Studio',
+    duration: '3 hours',
+    capacity: '8 students',
+    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80',
+  },
+  {
+    id: 'calligraphy',
+    title: 'Modern Calligraphy Essentials',
+    description: 'Learn the foundational strokes of modern calligraphy and how to apply them to invitation addressing, place cards, and decorative elements. All materials provided — just bring your creativity.',
+    format: 'In-Person',
+    location: 'Fort Lauderdale Studio',
+    duration: '2.5 hours',
+    capacity: '10 students',
+    image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80',
+  },
+  {
+    id: 'digital-design',
+    title: 'Digital Invitation Design',
+    description: 'Master the tools and techniques for creating stunning digital invitations. From layout principles to animation basics, you\'ll learn to design professional-quality digital invites from scratch.',
+    format: 'Online',
+    location: 'Live via Zoom',
+    duration: '2 hours',
+    capacity: '20 students',
+    image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80',
+  },
+  {
+    id: 'wax-seal',
+    title: 'Wax Seal & Finishing Touches',
+    description: 'The details make the difference. Learn the art of wax sealing, ribbon styling, envelope assembly, and all the finishing techniques that transform a simple invitation into a keepsake.',
+    format: 'In-Person',
+    location: 'Fort Lauderdale Studio',
+    duration: '2 hours',
+    capacity: '8 students',
+    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&q=80',
   },
 ]
 

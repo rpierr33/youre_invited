@@ -30,7 +30,6 @@ export function Hero() {
   return (
     <section className="pt-[76px] bg-white">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 py-6 md:py-10">
-        {/* Contained image block */}
         <div className="relative overflow-hidden h-[70vh] min-h-[450px] max-h-[700px]">
           {/* Background images — crossfade */}
           <AnimatePresence mode="sync">
@@ -46,10 +45,10 @@ export function Hero() {
             />
           </AnimatePresence>
 
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-black/5" />
+          {/* Stronger gradient for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/15" />
 
-          {/* Content — bottom-aligned inside the container */}
+          {/* Content */}
           <div className="relative z-10 h-full flex items-end p-8 md:p-12">
             <div>
               <motion.div
@@ -62,14 +61,14 @@ export function Hero() {
                   Fort Lauderdale's Premier{' '}
                   <span className="italic text-gold">Event Planners</span>
                 </h1>
-                <p className="font-body text-white/75 text-[0.875rem] md:text-[0.9375rem] mt-4 max-w-[440px] leading-relaxed">
+                <p className="font-body text-white/85 text-[0.9375rem] mt-4 max-w-[440px] leading-relaxed">
                   Every celebration, perfectly yours. Crafting unforgettable moments
                   with warmth, elegance, and South Florida soul.
                 </p>
                 <div className="flex flex-wrap gap-3 mt-7">
                   <Link
                     to="/gallery"
-                    className="font-body text-[0.75rem] tracking-[0.12em] uppercase text-white border border-white/40 px-6 py-2.5 hover:bg-white hover:text-charcoal transition-all duration-300"
+                    className="font-body text-[0.75rem] tracking-[0.12em] uppercase text-white border border-white/50 px-6 py-2.5 hover:bg-white hover:text-charcoal transition-all duration-300"
                   >
                     View Our Work
                   </Link>
@@ -89,7 +88,7 @@ export function Hero() {
                     key={i}
                     onClick={() => setCurrent(i)}
                     className={`transition-all duration-500 ${
-                      i === current ? 'w-7 h-[2px] bg-gold' : 'w-4 h-[2px] bg-white/30 hover:bg-white/50'
+                      i === current ? 'w-7 h-[2px] bg-gold' : 'w-4 h-[2px] bg-white/40 hover:bg-white/60'
                     }`}
                     aria-label={`Image ${i + 1}`}
                   />
