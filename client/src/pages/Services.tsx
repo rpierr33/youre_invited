@@ -21,6 +21,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
       <div className={isEven ? '' : 'lg:order-2'}>
         <div className="overflow-hidden">
           <img
+            loading="lazy"
             src={service.image}
             alt={service.title}
             className="w-full aspect-[4/5] object-cover"
@@ -64,6 +65,7 @@ export function Services() {
       <section className="pt-[76px]">
         <div className="w-full h-[50vh] min-h-[350px] max-h-[600px] overflow-hidden">
           <img
+            loading="lazy"
             src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&q=80"
             alt="Luxury wedding reception"
             className="w-full h-full object-cover"

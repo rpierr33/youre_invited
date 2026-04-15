@@ -42,6 +42,7 @@ export function ServicesStrip() {
             >
               <Link to="/services" className="group block relative overflow-hidden">
                 <img
+                  loading="lazy"
                   src={item.image}
                   alt={item.label}
                   className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"

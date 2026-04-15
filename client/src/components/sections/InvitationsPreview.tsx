@@ -63,6 +63,7 @@ export function InvitationsPreview() {
                 <Link to="/invitations" className="group block">
                   <div className="overflow-hidden mb-4">
                     <img
+                      loading="lazy"
                       src={item.image}
                       alt={item.label}
                       className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-[1.03]"

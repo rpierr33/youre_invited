@@ -21,6 +21,7 @@ function InvitationCard({ item, index }: { item: typeof invitationTypes[0]; inde
       <div className={isEven ? '' : 'lg:order-2'}>
         <div className="overflow-hidden">
           <img
+            loading="lazy"
             src={item.image}
             alt={item.title}
             className="w-full aspect-[4/5] object-cover"
@@ -63,6 +64,7 @@ function WorkshopCard({ workshop, index }: { workshop: typeof workshopTypes[0]; 
     >
       <div className="overflow-hidden mb-5">
         <img
+          loading="lazy"
           src={workshop.image}
           alt={workshop.title}
           className="w-full aspect-[3/2] object-cover transition-transform duration-700 group-hover:scale-[1.03]"
@@ -106,6 +108,7 @@ export function Invitations() {
         <div className="max-w-[1200px] mx-auto px-6 lg:px-12 py-6 md:py-10">
           <div className="relative overflow-hidden h-[50vh] min-h-[350px] max-h-[500px]">
             <img
+              loading="lazy"
               src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=1920&q=85"
               alt="Luxury custom wedding invitations with calligraphy"
               className="w-full h-full object-cover"
@@ -303,6 +306,7 @@ export function Invitations() {
             </div>
             <div>
               <img
+                loading="lazy"
                 src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=700&q=80"
                 alt="Hands-on invitation crafting workshop"
                 className="w-full aspect-square object-cover"

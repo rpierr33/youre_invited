@@ -10,6 +10,7 @@ export function ContactCta() {
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
+          loading="lazy"
           src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920&q=80"
           alt=""
           className="w-full h-full object-cover"

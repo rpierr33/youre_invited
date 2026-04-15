@@ -16,6 +16,7 @@ export function AboutSnippet() {
             transition={{ duration: 0.7 }}
           >
             <img
+              loading="lazy"
               src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=700&q=80"
               alt="Elegant wedding venue with tropical floral arrangements"
               className="w-full aspect-[4/5] object-cover"

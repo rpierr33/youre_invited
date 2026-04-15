@@ -77,6 +77,7 @@ export function Gallery() {
                   onClick={() => setSelectedImage(image)}
                 >
                   <img
+                    loading="lazy"
                     src={image.src}
                     alt={image.alt}
                     className="w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
@@ -93,6 +94,7 @@ export function Gallery() {
       <Modal isOpen={!!selectedImage} onClose={() => setSelectedImage(null)}>
         {selectedImage && (
           <img
+            loading="lazy"
             src={selectedImage.src.replace('w=800', 'w=1400')}
             alt={selectedImage.alt}
             className="w-full max-h-[85vh] object-contain"

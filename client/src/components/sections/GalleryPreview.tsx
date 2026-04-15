@@ -41,6 +41,7 @@ export function GalleryPreview() {
           >
             <Link to="/gallery" className="block group overflow-hidden h-full">
               <img
+                loading="lazy"
                 src={images[0].src}
                 alt={images[0].alt}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
@@ -57,6 +58,7 @@ export function GalleryPreview() {
             >
               <Link to="/gallery" className="block group overflow-hidden">
                 <img
+                  loading="lazy"
                   src={img.src}
                   alt={img.alt}
                   className="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-[1.03]"

@@ -63,6 +63,7 @@ export function About() {
       <section className="pt-[76px]">
         <div className="w-full h-[50vh] min-h-[350px] max-h-[600px] overflow-hidden">
           <img
+            loading="lazy"
             src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1920&q=80"
             alt="Elegant event setup"
             className="w-full h-full object-cover"
@@ -80,6 +81,7 @@ export function About() {
               transition={{ duration: 0.8 }}
             >
               <img
+                loading="lazy"
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
                 alt="Noelle, founder of You're Invited"
                 className="w-full aspect-[3/4] object-cover"

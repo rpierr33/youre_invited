@@ -16,6 +16,7 @@ const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Con
 const Invitations = lazy(() => import('./pages/Invitations').then(m => ({ default: m.Invitations })))
 const Login = lazy(() => import('./pages/Login').then(m => ({ default: m.Login })))
 const Admin = lazy(() => import('./pages/Admin').then(m => ({ default: m.Admin })))
+const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })))
 
 function PageFallback() {
   return (
@@ -46,6 +47,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </PageLayout>
           }
