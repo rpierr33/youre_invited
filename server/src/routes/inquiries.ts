@@ -26,11 +26,17 @@ router.post('/', async (req, res) => {
       return
     }
 
-    const result = db.insert(inquiries).values({
-      ...parsed.data,
-      status: 'new',
+    const [result] = await db.insert(inquiries).values({
+      name: parsed.data.name,
+      email: parsed.data.email,
+      phone: parsed.data.phone,
+      eventType: parsed.data.eventType,
+      guestCount: parsed.data.guestCount,
+      eventDate: parsed.data.eventDate,
+      budgetRange: parsed.data.budgetRange,
+      message: parsed.data.message,
       createdAt: new Date().toISOString(),
-    }).returning().get()
+    }).returning()
 
     res.status(201).json({ message: 'Inquiry submitted successfully', inquiry: result })
   } catch (error) {
@@ -40,9 +46,9 @@ router.post('/', async (req, res) => {
 })
 
 // Admin: List all inquiries
-router.get('/', authenticateToken, (req: AuthRequest, res) => {
+router.get('/', authenticateToken, async (req: AuthRequest, res) => {
   try {
-    const allInquiries = db.select().from(inquiries).orderBy(desc(inquiries.createdAt)).all()
+    const allInquiries = await db.select().from(inquiries).orderBy(desc(inquiries.createdAt))
     res.json(allInquiries)
   } catch (error) {
     console.error('List inquiries error:', error)
@@ -50,19 +56,33 @@ router.get('/', authenticateToken, (req: AuthRequest, res) => {
   }
 })
 
-// Admin: Update inquiry status
-router.patch('/:id', authenticateToken, (req: AuthRequest, res) => {
+// Admin: Update inquiry status/notes
+router.patch('/:id', authenticateToken, async (req: AuthRequest, res) => {
   try {
     const id = parseInt(req.params.id as string)
-    const { status } = req.body
+    const { status, notes } = req.body
 
-    const validStatuses = ['new', 'contacted', 'booked', 'declined']
-    if (!validStatuses.includes(status)) {
-      res.status(400).json({ error: 'Invalid status. Must be: new, contacted, booked, or declined' })
+    const updateData: Record<string, unknown> = {}
+
+    if (status !== undefined) {
+      const validStatuses = ['new', 'contacted', 'qualified', 'proposal', 'booked', 'completed', 'lost']
+      if (!validStatuses.includes(status)) {
+        res.status(400).json({ error: 'Invalid status' })
+        return
+      }
+      updateData.status = status
+    }
+
+    if (notes !== undefined) {
+      updateData.notes = notes
+    }
+
+    if (Object.keys(updateData).length === 0) {
+      res.status(400).json({ error: 'No valid fields to update' })
       return
     }
 
-    const updated = db.update(inquiries).set({ status }).where(eq(inquiries.id, id)).returning().get()
+    const [updated] = await db.update(inquiries).set(updateData).where(eq(inquiries.id, id)).returning()
 
     if (!updated) {
       res.status(404).json({ error: 'Inquiry not found' })
@@ -77,10 +97,10 @@ router.patch('/:id', authenticateToken, (req: AuthRequest, res) => {
 })
 
 // Admin: Delete inquiry
-router.delete('/:id', authenticateToken, (req: AuthRequest, res) => {
+router.delete('/:id', authenticateToken, async (req: AuthRequest, res) => {
   try {
     const id = parseInt(req.params.id as string)
-    const deleted = db.delete(inquiries).where(eq(inquiries.id, id)).returning().get()
+    const [deleted] = await db.delete(inquiries).where(eq(inquiries.id, id)).returning()
 
     if (!deleted) {
       res.status(404).json({ error: 'Inquiry not found' })

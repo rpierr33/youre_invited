@@ -1,13 +1,13 @@
 const eventTypes = [
-  'Weddings',
-  'Corporate Events',
-  'Galas & Fundraisers',
-  'Destination Events',
-  'Quinceañeras',
-  'Social Celebrations',
-  'Anniversaries',
-  'Mitzvahs',
   'Custom Invitations',
+  'Weddings',
+  'Birthdays',
+  'Bridal Showers',
+  'Baby Showers',
+  'Anniversaries',
+  'Corporate Events',
+  'Social Celebrations',
+  'Event Design & Styling',
   'Workshops & Courses',
 ]
 
@@ -20,10 +20,10 @@ export function PressStrip() {
         {items.map((item, i) => (
           <span
             key={`${item}-${i}`}
-            className="inline-flex items-center px-8 font-body text-[0.6875rem] tracking-[0.2em] uppercase text-warm-gray"
+            className="inline-flex items-center px-8 font-body text-[0.6875rem] tracking-[0.2em] uppercase text-taupe"
           >
             {item}
-            <span className="ml-8 text-gold">&#9830;</span>
+            <span className="ml-8 text-sage">&#9830;</span>
           </span>
         ))}
       </div>

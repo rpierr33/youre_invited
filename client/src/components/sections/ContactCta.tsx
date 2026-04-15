@@ -23,16 +23,16 @@ export function ContactCta() {
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <div className="gold-rule mx-auto mb-6" />
+          <div className="sage-rule mx-auto mb-6" />
           <h2 className="font-cormorant text-[2rem] md:text-[2.75rem] font-light text-charcoal leading-[1.2]">
-            Ready to create something <span className="italic text-gold">unforgettable</span>?
+            You bring the reason to celebrate. <span className="italic text-sage">I'll handle the rest.</span>
           </h2>
-          <p className="font-body text-warm-gray text-[0.9375rem] leading-relaxed mt-5 mb-9">
-            We'd love to hear about your vision. Let's bring it to life together.
+          <p className="font-body text-taupe text-[0.9375rem] leading-relaxed mt-5 mb-9">
+            Ready to create something memorable (and have a little fun along the way)? You're in the right place.
           </p>
           <Link
             to="/contact"
-            className="inline-block font-body text-[0.75rem] tracking-[0.15em] uppercase bg-gold text-white px-8 py-3.5 hover:bg-gold-dark transition-colors duration-300"
+            className="inline-block font-body text-[0.75rem] tracking-[0.15em] uppercase bg-sage text-white px-8 py-3.5 hover:bg-sage-dark transition-colors duration-300"
           >
             Start Planning
           </Link>

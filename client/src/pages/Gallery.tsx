@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { SEO } from '../components/SEO'
 import { Modal } from '../components/ui/Modal'
 import { galleryImages } from '../lib/data'
 import type { GalleryImage } from '../types'
@@ -22,6 +23,11 @@ export function Gallery() {
 
   return (
     <>
+      <SEO
+        title="Event Gallery | Weddings, Birthdays & Celebrations in South Florida | You're Invited"
+        description="Browse our portfolio of beautifully designed events in South Florida. Weddings, birthday parties, bridal showers, corporate events, and milestone celebrations planned and styled by You're Invited in Fort Lauderdale."
+        path="/gallery"
+      />
       {/* Header */}
       <section className="pt-[76px]">
         <div className="py-20 bg-white text-center">
@@ -29,7 +35,7 @@ export function Gallery() {
             <h1 className="font-cormorant text-[2.5rem] md:text-[3.5rem] font-light text-charcoal leading-[1.15]">
               Gallery
             </h1>
-            <p className="font-body text-warm-gray text-[0.9375rem] leading-relaxed mt-5">
+            <p className="font-body text-taupe text-[0.9375rem] leading-relaxed mt-5">
               A visual journey through our celebrations.
             </p>
           </div>
@@ -48,7 +54,7 @@ export function Gallery() {
                 className={`font-body text-[0.75rem] tracking-[0.12em] uppercase pb-1 transition-all duration-300 ${
                   activeCategory === cat.key
                     ? 'text-charcoal border-b border-charcoal'
-                    : 'text-warm-gray hover:text-charcoal'
+                    : 'text-taupe hover:text-charcoal'
                 }`}
               >
                 {cat.label}

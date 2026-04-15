@@ -15,7 +15,7 @@ router.post('/login', async (req, res) => {
       return
     }
 
-    const admin = db.select().from(admins).where(eq(admins.username, username)).get()
+    const [admin] = await db.select().from(admins).where(eq(admins.username, username))
 
     if (!admin) {
       res.status(401).json({ error: 'Invalid credentials' })

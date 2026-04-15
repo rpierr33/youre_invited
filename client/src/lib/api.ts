@@ -1,4 +1,4 @@
-import type { Inquiry, InquiryFormData, AuthResponse } from '../types'
+import type { Inquiry, InquiryFormData, AuthResponse, Deal } from '../types'
 
 const API_BASE = '/api'
 
@@ -54,10 +54,55 @@ export async function updateInquiryStatus(id: number, status: string): Promise<I
   return res.json()
 }
 
+export async function updateInquiryNotes(id: number, notes: string): Promise<Inquiry> {
+  const res = await fetch(`${API_BASE}/inquiries/${id}`, {
+    method: 'PATCH',
+    headers: getAuthHeaders(),
+    body: JSON.stringify({ notes }),
+  })
+  if (!res.ok) throw new Error('Failed to update inquiry notes')
+  return res.json()
+}
+
 export async function deleteInquiry(id: number): Promise<void> {
   const res = await fetch(`${API_BASE}/inquiries/${id}`, {
     method: 'DELETE',
     headers: getAuthHeaders(),
   })
   if (!res.ok) throw new Error('Failed to delete inquiry')
+}
+
+// Deals API
+export async function getDeals(): Promise<Deal[]> {
+  const res = await fetch(`${API_BASE}/deals`, { headers: getAuthHeaders() })
+  if (!res.ok) throw new Error('Failed to fetch deals')
+  return res.json()
+}
+
+export async function createDeal(data: Partial<Deal>): Promise<Deal> {
+  const res = await fetch(`${API_BASE}/deals`, {
+    method: 'POST',
+    headers: getAuthHeaders(),
+    body: JSON.stringify(data),
+  })
+  if (!res.ok) throw new Error('Failed to create deal')
+  return res.json()
+}
+
+export async function updateDeal(id: number, data: Partial<Deal>): Promise<Deal> {
+  const res = await fetch(`${API_BASE}/deals/${id}`, {
+    method: 'PATCH',
+    headers: getAuthHeaders(),
+    body: JSON.stringify(data),
+  })
+  if (!res.ok) throw new Error('Failed to update deal')
+  return res.json()
+}
+
+export async function deleteDeal(id: number): Promise<void> {
+  const res = await fetch(`${API_BASE}/deals/${id}`, {
+    method: 'DELETE',
+    headers: getAuthHeaders(),
+  })
+  if (!res.ok) throw new Error('Failed to delete deal')
 }

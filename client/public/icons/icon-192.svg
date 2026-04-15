@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <rect width="192" height="192" rx="32" fill="#1B3A4B"/>
+  <g transform="translate(96,96)">
+    <!-- Envelope body -->
+    <rect x="-56" y="-32" width="112" height="72" rx="6" fill="none" stroke="#C9A96E" stroke-width="5"/>
+    <!-- Envelope flap lines -->
+    <polyline points="-56,-32 0,16 56,-32" fill="none" stroke="#C9A96E" stroke-width="5" stroke-linejoin="round"/>
+    <!-- Bottom fold accents -->
+    <line x1="-56" y1="40" x2="-16" y2="8" stroke="#C9A96E" stroke-width="3" opacity="0.5"/>
+    <line x1="56" y1="40" x2="16" y2="8" stroke="#C9A96E" stroke-width="3" opacity="0.5"/>
+    <!-- Small star/sparkle -->
+    <circle cx="36" cy="-48" r="3" fill="#C9A96E" opacity="0.7"/>
+    <circle cx="48" cy="-44" r="2" fill="#C9A96E" opacity="0.5"/>
+  </g>
+</svg>

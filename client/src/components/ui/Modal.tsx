@@ -38,7 +38,7 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
           >
             <button
               onClick={onClose}
-              className="absolute -top-12 right-0 text-white text-3xl hover:text-gold transition-colors"
+              className="absolute -top-12 right-0 text-white text-3xl hover:text-sage transition-colors"
               aria-label="Close"
             >
               &times;

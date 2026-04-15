@@ -28,26 +28,28 @@ export function AboutSnippet() {
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15 }}
           >
-            <div className="gold-rule mb-6" />
+            <div className="sage-rule mb-6" />
             <h2 className="font-cormorant text-[2rem] md:text-[2.5rem] font-light text-charcoal leading-[1.2] mb-6">
-              Where South Florida's <br className="hidden md:block" />
-              <span className="italic text-gold">Most Beautiful</span> Moments Begin
+              Where Great Events Start with a{' '}
+              <span className="italic text-sage">Great First Impression</span>
             </h2>
-            <p className="font-body text-warm-gray text-[0.9375rem] leading-[1.8] mb-5">
-              Renowned as one of the most sought-after event planners in South Florida,
-              You're Invited brings to life unexpected, imaginative, and uniquely personal
-              celebrations for clients across the globe.
+            <p className="font-body text-taupe text-[0.9375rem] leading-[1.8] mb-5">
+              I'm Noelle, the planner, designer, and detail-lover behind You're Invited — a South
+              Florida-based event planning and custom invitation studio. With over 12 years of experience
+              working with DMCs and Fortune 500 companies, I bring both creative heart and
+              corporate-level precision to every celebration.
             </p>
-            <p className="font-body text-warm-gray text-[0.9375rem] leading-[1.8] mb-8">
-              With over 15 years rooted in Fort Lauderdale — from sunset ceremonies along the
-              Intracoastal to elegant galas on Las Olas Boulevard — we craft events that feel
-              as warm and extraordinary as the people at their center.
+            <p className="font-body text-taupe text-[0.9375rem] leading-[1.8] mb-8">
+              Inspired by South Florida's vibrant energy and laid-back elegance, I mix creativity
+              with organization to create events that are stylish, seamless, and full of heart.
+              No cookie-cutter designs here — every invitation, every event, and every detail
+              is tailored to your vision and your story.
             </p>
             <Link
               to="/about"
-              className="inline-flex items-center gap-3 font-body text-[0.75rem] tracking-[0.15em] uppercase text-charcoal border-b border-charcoal/30 pb-1 hover:border-gold hover:text-gold transition-all duration-300"
+              className="inline-flex items-center gap-3 font-body text-[0.75rem] tracking-[0.15em] uppercase text-charcoal border-b border-charcoal/30 pb-1 hover:border-sage hover:text-sage transition-all duration-300"
             >
-              Meet Our Team
+              Meet Noelle
               <span>&rarr;</span>
             </Link>
           </motion.div>

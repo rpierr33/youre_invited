@@ -17,14 +17,14 @@ export function GalleryPreview() {
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <div className="gold-rule mb-4" />
+            <div className="sage-rule mb-4" />
             <h2 className="font-cormorant text-[2rem] md:text-[2.5rem] font-light text-charcoal">
               Selected Work
             </h2>
           </motion.div>
           <Link
             to="/gallery"
-            className="hidden sm:inline-flex items-center gap-2 font-body text-[0.75rem] tracking-[0.12em] uppercase text-charcoal hover:text-gold transition-colors mb-2"
+            className="hidden sm:inline-flex items-center gap-2 font-body text-[0.75rem] tracking-[0.12em] uppercase text-charcoal hover:text-sage transition-colors mb-2"
           >
             View All <span>&rarr;</span>
           </Link>
@@ -70,7 +70,7 @@ export function GalleryPreview() {
         <div className="sm:hidden text-center mt-8">
           <Link
             to="/gallery"
-            className="inline-flex items-center gap-2 font-body text-[0.75rem] tracking-[0.12em] uppercase text-charcoal hover:text-gold transition-colors"
+            className="inline-flex items-center gap-2 font-body text-[0.75rem] tracking-[0.12em] uppercase text-charcoal hover:text-sage transition-colors"
           >
             View Full Gallery <span>&rarr;</span>
           </Link>

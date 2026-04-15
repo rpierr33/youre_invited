@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --gold: #C9A96E;
-  --gold-light: #E8D5B0;
-  --gold-dark: #8B5E3C;
-  --navy: #1B3A4B;
-  --charcoal: #2C2C2C;
-  --warm-gray: #8A8580;
-  --light-warm: #F9F7F4;
-  --border: #E8E6E3;
+  --sage: #809A7B;
+  --sage-light: #ADC9B8;
+  --sage-dark: #4B624B;
+  --sage-mist: #E2E9E1;
+  --accent: #9D7B2F;
+  --accent-light: #C9A96E;
+  --forest: #212721;
+  --charcoal: #2D2A1F;
+  --taupe: #B4AC9F;
+  --light-warm: #F9F6F2;
+  --surface: #FDFCFA;
+  --surface-warm: #F5F0E7;
+  --border: #E2DED9;
 }
 
 * {
@@ -21,21 +26,22 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Lato', sans-serif;
   color: var(--charcoal);
-  background-color: #ffffff;
+  background-color: var(--light-warm);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Gold rule divider */
-.gold-rule {
+/* Sage rule divider */
+.sage-rule {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light), transparent);
+  background: linear-gradient(90deg, var(--sage), var(--sage-light), transparent);
   max-width: 120px;
 }
 
@@ -72,7 +78,7 @@ body {
   line-height: 0.75;
   padding-right: 0.75rem;
   padding-top: 0.3rem;
-  color: var(--gold);
+  color: var(--sage);
   font-weight: 500;
 }
 
@@ -103,7 +109,7 @@ body {
   transition: border-color 0.3s ease;
 }
 .form-input:focus {
-  border-bottom-color: var(--gold);
+  border-bottom-color: var(--sage);
 }
 .form-input::placeholder {
   color: #b0aca7;
@@ -111,7 +117,7 @@ body {
 
 /* Selection */
 ::selection {
-  background: var(--gold-light);
+  background: var(--sage-light);
   color: var(--charcoal);
 }
 

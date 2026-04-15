@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { SEO } from '../components/SEO'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -17,7 +18,7 @@ const contactSchema = z.object({
   message: z.string().optional(),
 })
 
-const eventTypes = ['Wedding', 'Corporate Event', 'Gala & Fundraiser', 'Destination Event', 'Quinceañera / Mitzvah', 'Social Celebration', 'Other']
+const eventTypes = ['Wedding', 'Birthday', 'Bridal Shower', 'Baby Shower', 'Anniversary', 'Corporate Event', 'Social Celebration', 'Other']
 const budgetRanges = ['Under $10,000', '$10,000 - $25,000', '$25,000 - $50,000', '$50,000 - $75,000', '$75,000 - $100,000', '$100,000+']
 
 export function Contact() {
@@ -39,6 +40,11 @@ export function Contact() {
 
   return (
     <section className="pt-[76px]">
+      <SEO
+        title="Contact You're Invited | Get a Free Event Planning Quote | Fort Lauderdale FL"
+        description="Ready to plan your event? Contact You're Invited for a free consultation. Event planning, custom invitations, and day-of coordination in Fort Lauderdale and South Florida. Weddings, birthdays, bridal showers, and more."
+        path="/contact"
+      />
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 py-20 md:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-28">
           {/* Left: Info */}
@@ -51,21 +57,21 @@ export function Contact() {
               Get in Touch
             </h1>
             <p className="font-cormorant text-[1.375rem] leading-[1.7] text-charcoal font-light mt-8">
-              We'd love to hear about your vision. Whether you're dreaming of a sunset ceremony
-              on the Intracoastal or a grand gala on Las Olas, let's make it unforgettable.
+              I'd love to hear about your vision. Whether you're planning a birthday, bridal shower,
+              wedding, or milestone celebration, let's make it unforgettable — and have a little fun along the way.
             </p>
 
-            <div className="mt-12 space-y-6 font-body text-[0.9375rem] text-warm-gray">
+            <div className="mt-12 space-y-6 font-body text-[0.9375rem] text-taupe">
               <div>
-                <p className="text-[0.6875rem] tracking-[0.15em] uppercase text-warm-gray mb-1">Location</p>
+                <p className="text-[0.6875rem] tracking-[0.15em] uppercase text-taupe mb-1">Location</p>
                 <p className="text-charcoal">Fort Lauderdale, FL 33301</p>
               </div>
               <div>
-                <p className="text-[0.6875rem] tracking-[0.15em] uppercase text-warm-gray mb-1">Phone</p>
+                <p className="text-[0.6875rem] tracking-[0.15em] uppercase text-taupe mb-1">Phone</p>
                 <a href="tel:+19545550100" className="text-charcoal hover:opacity-50 transition-opacity">(954) 555-0100</a>
               </div>
               <div>
-                <p className="text-[0.6875rem] tracking-[0.15em] uppercase text-warm-gray mb-1">Email</p>
+                <p className="text-[0.6875rem] tracking-[0.15em] uppercase text-taupe mb-1">Email</p>
                 <a href="mailto:hello@youreinvited.com" className="text-charcoal hover:opacity-50 transition-opacity">hello@youreinvited.com</a>
               </div>
               <div className="flex gap-5 pt-4">
@@ -95,7 +101,7 @@ export function Contact() {
                 className="py-20 text-center"
               >
                 <h3 className="font-cormorant text-[2rem] font-light text-charcoal mb-4">Thank You</h3>
-                <p className="font-body text-warm-gray text-[0.9375rem] mb-8">
+                <p className="font-body text-taupe text-[0.9375rem] mb-8">
                   Your inquiry has been received. We'll be in touch within 24 hours.
                 </p>
                 <button

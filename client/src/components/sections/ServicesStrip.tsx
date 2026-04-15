@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver'
 
 const serviceItems = [
-  { label: 'Weddings', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=500&q=80' },
-  { label: 'Corporate Events', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80' },
-  { label: 'Galas & Fundraisers', image: 'https://images.unsplash.com/photo-1478146059778-26028b07395a?w=500&q=80' },
-  { label: 'Destination Events', image: 'https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=500&q=80' },
+  { label: 'Custom Invitations', image: 'https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=500&q=80' },
+  { label: 'Event Planning', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=500&q=80' },
+  { label: 'Event Design & Styling', image: 'https://images.unsplash.com/photo-1478146059778-26028b07395a?w=500&q=80' },
+  { label: 'Social & Milestone Events', image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&q=80' },
 ]
 
 export function ServicesStrip() {
@@ -22,12 +22,12 @@ export function ServicesStrip() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="gold-rule mx-auto mb-4" />
+          <div className="sage-rule mx-auto mb-4" />
           <h2 className="font-cormorant text-[2rem] md:text-[2.5rem] font-light text-charcoal">
             What We Do
           </h2>
-          <p className="font-body text-warm-gray text-[0.875rem] mt-3 max-w-md mx-auto">
-            From intimate ceremonies to grand celebrations, every detail designed with intention.
+          <p className="font-body text-taupe text-[0.875rem] mt-3 max-w-md mx-auto">
+            We handle the details so you can enjoy the celebration. From invitations to execution, polished and stress-free.
           </p>
         </motion.div>
 
@@ -60,7 +60,7 @@ export function ServicesStrip() {
         <div className="text-center mt-10">
           <Link
             to="/services"
-            className="inline-flex items-center gap-3 font-body text-[0.75rem] tracking-[0.15em] uppercase text-charcoal border-b border-charcoal/30 pb-1 hover:border-gold hover:text-gold transition-all duration-300"
+            className="inline-flex items-center gap-3 font-body text-[0.75rem] tracking-[0.15em] uppercase text-charcoal border-b border-charcoal/30 pb-1 hover:border-sage hover:text-sage transition-all duration-300"
           >
             Explore All Services <span>&rarr;</span>
           </Link>

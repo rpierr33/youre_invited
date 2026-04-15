@@ -32,7 +32,7 @@ export function TestimonialsCarousel() {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <span className="font-cormorant text-[5rem] leading-none text-gold/40">&ldquo;</span>
+          <span className="font-cormorant text-[5rem] leading-none text-sage/40">&ldquo;</span>
         </motion.div>
 
         {/* Quote */}
@@ -50,13 +50,13 @@ export function TestimonialsCarousel() {
                 {displayTestimonials[current].quote}
               </p>
               <div className="mt-8 flex items-center gap-3">
-                <div className="h-[1px] w-6 bg-gold" />
-                <p className="font-body text-[0.75rem] tracking-[0.12em] uppercase text-warm-gray">
+                <div className="h-[1px] w-6 bg-sage" />
+                <p className="font-body text-[0.75rem] tracking-[0.12em] uppercase text-taupe">
                   {displayTestimonials[current].name}
                 </p>
-                <div className="h-[1px] w-6 bg-gold" />
+                <div className="h-[1px] w-6 bg-sage" />
               </div>
-              <p className="font-body text-[0.6875rem] text-warm-gray/60 mt-1 uppercase tracking-wider">
+              <p className="font-body text-[0.6875rem] text-taupe/60 mt-1 uppercase tracking-wider">
                 {displayTestimonials[current].eventType}
               </p>
             </motion.div>
@@ -70,7 +70,7 @@ export function TestimonialsCarousel() {
               key={i}
               onClick={() => setCurrent(i)}
               className={`rounded-full transition-all duration-400 ${
-                i === current ? 'w-7 h-[3px] bg-gold' : 'w-[3px] h-[3px] bg-charcoal/20 hover:bg-charcoal/40'
+                i === current ? 'w-7 h-[3px] bg-sage' : 'w-[3px] h-[3px] bg-charcoal/20 hover:bg-charcoal/40'
               }`}
               aria-label={`Testimonial ${i + 1}`}
             />

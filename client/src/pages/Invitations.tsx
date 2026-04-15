@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { SEO } from '../components/SEO'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import { invitationTypes, workshopTypes } from '../lib/data'
 import { ContactCta } from '../components/sections/ContactCta'
@@ -28,19 +29,19 @@ function InvitationCard({ item, index }: { item: typeof invitationTypes[0]; inde
       </div>
       <div className={isEven ? '' : 'lg:order-1'}>
         <h3 className="font-cormorant text-[2rem] font-light text-charcoal mb-4">{item.title}</h3>
-        <div className="gold-rule mb-5" />
-        <p className="font-body text-warm-gray text-[0.9375rem] leading-[1.8] mb-6">{item.description}</p>
+        <div className="sage-rule mb-5" />
+        <p className="font-body text-taupe text-[0.9375rem] leading-[1.8] mb-6">{item.description}</p>
         <ul className="space-y-2.5 mb-8">
           {item.features.map((feature) => (
             <li key={feature} className="flex items-start gap-3">
-              <span className="text-gold mt-1 text-sm">&#9670;</span>
+              <span className="text-sage mt-1 text-sm">&#9670;</span>
               <span className="font-body text-[0.875rem] text-charcoal/70">{feature}</span>
             </li>
           ))}
         </ul>
         <Link
           to="/contact"
-          className="inline-flex items-center gap-3 font-body text-[0.75rem] tracking-[0.15em] uppercase text-charcoal border-b border-charcoal/30 pb-1 hover:border-gold hover:text-gold transition-all duration-300"
+          className="inline-flex items-center gap-3 font-body text-[0.75rem] tracking-[0.15em] uppercase text-charcoal border-b border-charcoal/30 pb-1 hover:border-sage hover:text-sage transition-all duration-300"
         >
           Request a Quote <span>&rarr;</span>
         </Link>
@@ -70,16 +71,16 @@ function WorkshopCard({ workshop, index }: { workshop: typeof workshopTypes[0]; 
       <div className="flex items-center gap-3 mb-3">
         <span className={`font-body text-[0.6875rem] tracking-[0.12em] uppercase px-3 py-1 ${
           workshop.format === 'In-Person'
-            ? 'bg-gold/10 text-gold-dark'
+            ? 'bg-sage/10 text-sage-dark'
             : 'bg-charcoal/5 text-charcoal/60'
         }`}>
           {workshop.format}
         </span>
-        <span className="font-body text-[0.75rem] text-warm-gray">{workshop.duration}</span>
+        <span className="font-body text-[0.75rem] text-taupe">{workshop.duration}</span>
       </div>
       <h3 className="font-cormorant text-[1.5rem] font-light text-charcoal mb-2">{workshop.title}</h3>
-      <p className="font-body text-[0.875rem] text-warm-gray leading-relaxed mb-4">{workshop.description}</p>
-      <div className="flex items-center gap-4 text-[0.75rem] text-warm-gray font-body mb-5">
+      <p className="font-body text-[0.875rem] text-taupe leading-relaxed mb-4">{workshop.description}</p>
+      <div className="flex items-center gap-4 text-[0.75rem] text-taupe font-body mb-5">
         <span>{workshop.location}</span>
         <span className="text-border">|</span>
         <span>Max {workshop.capacity}</span>
@@ -95,6 +96,11 @@ export function Invitations() {
 
   return (
     <>
+      <SEO
+        title="Custom Invitations Fort Lauderdale | Wedding, Birthday & Event Invitations | You're Invited"
+        description="Custom invitation design and printing in South Florida. Wedding suites, birthday invitations, corporate event invitations, and digital designs. Handcrafted paper goods and letterpress workshops in Fort Lauderdale."
+        path="/invitations"
+      />
       {/* Hero */}
       <section className="pt-[76px]">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-12 py-6 md:py-10">
@@ -111,9 +117,9 @@ export function Invitations() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="h-[1px] w-14 bg-gold mb-5" />
+                <div className="h-[1px] w-14 bg-sage mb-5" />
                 <h1 className="font-cormorant text-[2.5rem] md:text-[3.5rem] font-light text-white leading-[1.1] max-w-[600px]">
-                  Custom <span className="italic text-gold">Invitations</span>
+                  Custom <span className="italic text-sage">Invitations</span>
                 </h1>
                 <p className="font-body text-white/80 text-[0.9375rem] mt-4 max-w-[450px] leading-relaxed">
                   Handcrafted and digital invitation designs that set the tone
@@ -133,16 +139,15 @@ export function Invitations() {
             animate={introVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
           >
-            <div className="gold-rule mx-auto mb-6" />
+            <div className="sage-rule mx-auto mb-6" />
             <h2 className="font-cormorant text-[2rem] md:text-[2.5rem] font-light text-charcoal leading-[1.2]">
-              Your Event Begins with the <span className="italic text-gold">Invitation</span>
+              Your Event Begins with the <span className="italic text-sage">Invitation</span>
             </h2>
-            <p className="font-body text-warm-gray text-[0.9375rem] leading-[1.8] mt-5">
-              An invitation is more than a piece of paper — it's a promise of what's to come.
-              We design and produce custom invitation suites for every type of celebration,
-              from lavish wedding collections with hand-painted florals and gold foil,
-              to sleek digital invitations with built-in RSVP tracking. If we can plan your event,
-              we can create the perfect invitation to match.
+            <p className="font-body text-taupe text-[0.9375rem] leading-[1.8] mt-5">
+              From save-the-dates to the final thank-you, we design and print custom invitations
+              and paper goods that set the tone for your event. Our designs are tailored to your style,
+              professionally printed, and thoughtfully curated to feel just as special as the
+              celebration itself. Not your average invitation. Not your average event.
             </p>
           </motion.div>
         </div>
@@ -166,11 +171,11 @@ export function Invitations() {
             transition={{ duration: 0.6 }}
             className="text-center mb-14"
           >
-            <div className="gold-rule mx-auto mb-6" />
+            <div className="sage-rule mx-auto mb-6" />
             <h2 className="font-cormorant text-[2rem] md:text-[2.75rem] font-light text-charcoal leading-[1.2]">
-              Workshops & <span className="italic text-gold">Courses</span>
+              Workshops & <span className="italic text-sage">Courses</span>
             </h2>
-            <p className="font-body text-warm-gray text-[0.9375rem] leading-[1.8] mt-4 max-w-[600px] mx-auto">
+            <p className="font-body text-taupe text-[0.9375rem] leading-[1.8] mt-4 max-w-[600px] mx-auto">
               Learn the art of invitation design from our expert team. In-person workshops
               at our Fort Lauderdale studio for hands-on techniques, and online courses
               for digital design — perfect for creatives, aspiring stationers, and DIY enthusiasts.
@@ -190,7 +195,7 @@ export function Invitations() {
               <h3 className="font-cormorant text-[1.75rem] font-light text-charcoal text-center mb-2">
                 Book a Workshop
               </h3>
-              <p className="font-body text-warm-gray text-[0.875rem] text-center mb-8">
+              <p className="font-body text-taupe text-[0.875rem] text-center mb-8">
                 Choose your preferred booking method
               </p>
 
@@ -201,7 +206,7 @@ export function Invitations() {
                   className={`px-6 py-2.5 font-body text-[0.75rem] tracking-[0.1em] uppercase transition-all duration-300 ${
                     bookingMode === 'calendar'
                       ? 'bg-charcoal text-white'
-                      : 'text-warm-gray hover:text-charcoal'
+                      : 'text-taupe hover:text-charcoal'
                   }`}
                 >
                   Schedule Online
@@ -211,7 +216,7 @@ export function Invitations() {
                   className={`px-6 py-2.5 font-body text-[0.75rem] tracking-[0.1em] uppercase transition-all duration-300 ${
                     bookingMode === 'message'
                       ? 'bg-charcoal text-white'
-                      : 'text-warm-gray hover:text-charcoal'
+                      : 'text-taupe hover:text-charcoal'
                   }`}
                 >
                   Send a Message
@@ -224,27 +229,27 @@ export function Invitations() {
                   <div className="border border-border rounded overflow-hidden">
                     <div className="bg-light-warm py-20 px-6 text-center">
                       <p className="font-cormorant text-2xl text-charcoal mb-3">Select a Date & Time</p>
-                      <p className="font-body text-[0.875rem] text-warm-gray mb-6">
+                      <p className="font-body text-[0.875rem] text-taupe mb-6">
                         Browse available workshop dates and book your spot instantly.
                       </p>
                       <a
                         href="https://calendly.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block font-body text-[0.75rem] tracking-[0.15em] uppercase bg-gold text-white px-8 py-3 hover:bg-gold-dark transition-colors duration-300"
+                        className="inline-block font-body text-[0.75rem] tracking-[0.15em] uppercase bg-sage text-white px-8 py-3 hover:bg-sage-dark transition-colors duration-300"
                       >
                         Open Scheduling Calendar
                       </a>
-                      <p className="font-body text-[0.75rem] text-warm-gray/60 mt-4">
+                      <p className="font-body text-[0.75rem] text-taupe/60 mt-4">
                         Powered by Calendly &middot; Replace this with your embedded calendar
                       </p>
                     </div>
                   </div>
-                  <p className="font-body text-[0.8125rem] text-warm-gray mt-6">
+                  <p className="font-body text-[0.8125rem] text-taupe mt-6">
                     Can't find a time that works?{' '}
                     <button
                       onClick={() => setBookingMode('message')}
-                      className="text-gold hover:text-gold-dark underline transition-colors"
+                      className="text-sage hover:text-sage-dark underline transition-colors"
                     >
                       Send us a message
                     </button>{' '}
@@ -253,13 +258,13 @@ export function Invitations() {
                 </div>
               ) : (
                 <div>
-                  <p className="font-body text-[0.875rem] text-warm-gray text-center mb-6">
+                  <p className="font-body text-[0.875rem] text-taupe text-center mb-6">
                     Tell us which workshop you're interested in and any scheduling preferences.
                     We'll get back to you within 24 hours.
                   </p>
                   <Link
                     to="/contact"
-                    className="block text-center font-body text-[0.75rem] tracking-[0.15em] uppercase bg-gold text-white px-8 py-3 hover:bg-gold-dark transition-colors duration-300 max-w-xs mx-auto"
+                    className="block text-center font-body text-[0.75rem] tracking-[0.15em] uppercase bg-sage text-white px-8 py-3 hover:bg-sage-dark transition-colors duration-300 max-w-xs mx-auto"
                   >
                     Contact Us About Workshops
                   </Link>
@@ -275,23 +280,23 @@ export function Invitations() {
         <div className="max-w-[900px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="gold-rule mb-5" />
+              <div className="sage-rule mb-5" />
               <h2 className="font-cormorant text-[2rem] font-light text-charcoal leading-[1.2] mb-4">
-                Private & Group <span className="italic text-gold">Training</span>
+                Private & Group <span className="italic text-sage">Training</span>
               </h2>
-              <p className="font-body text-warm-gray text-[0.9375rem] leading-[1.8] mb-4">
+              <p className="font-body text-taupe text-[0.9375rem] leading-[1.8] mb-4">
                 Looking for a custom experience? We offer private one-on-one training sessions
                 and group workshops for bridal parties, corporate team-building, and creative
                 groups. Whether you want to design your own wedding invitations or learn
                 a new skill with friends, we'll tailor the session to your goals.
               </p>
-              <p className="font-body text-warm-gray text-[0.9375rem] leading-[1.8] mb-8">
+              <p className="font-body text-taupe text-[0.9375rem] leading-[1.8] mb-8">
                 Private sessions are available both in-person at our Fort Lauderdale studio
                 and virtually via Zoom.
               </p>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-3 font-body text-[0.75rem] tracking-[0.15em] uppercase text-charcoal border-b border-charcoal/30 pb-1 hover:border-gold hover:text-gold transition-all duration-300"
+                className="inline-flex items-center gap-3 font-body text-[0.75rem] tracking-[0.15em] uppercase text-charcoal border-b border-charcoal/30 pb-1 hover:border-sage hover:text-sage transition-all duration-300"
               >
                 Inquire About Private Training <span>&rarr;</span>
               </Link>

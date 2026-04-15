@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { SEO } from '../components/SEO'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import { services } from '../lib/data'
+import { FAQ } from '../components/sections/FAQ'
 import { ContactCta } from '../components/sections/ContactCta'
 
 function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
@@ -27,9 +29,9 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
       </div>
       <div className={isEven ? '' : 'lg:order-1'}>
         <h3 className="font-cormorant text-[2rem] font-light text-charcoal mb-6">{service.title}</h3>
-        <p className="font-body text-[0.9375rem] text-warm-gray leading-[1.8] mb-8">{service.description}</p>
+        <p className="font-body text-[0.9375rem] text-taupe leading-[1.8] mb-8">{service.description}</p>
         <div className="mb-8">
-          <p className="font-body text-[0.6875rem] tracking-[0.15em] uppercase text-warm-gray mb-3">Planning Tiers</p>
+          <p className="font-body text-[0.6875rem] tracking-[0.15em] uppercase text-taupe mb-3">Planning Tiers</p>
           <div className="flex flex-wrap gap-x-6 gap-y-1">
             {service.tiers.map((tier) => (
               <span key={tier} className="font-cormorant text-[1.0625rem] text-charcoal">
@@ -53,6 +55,11 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
 export function Services() {
   return (
     <>
+      <SEO
+        title="Event Planning Services Fort Lauderdale | Custom Invitations, Day-Of Coordination | You're Invited"
+        description="Full-service event planning, custom invitation design, partial planning, day-of coordination, and event styling in South Florida. Weddings, birthdays, bridal showers, baby showers, and milestone celebrations."
+        path="/services"
+      />
       {/* Hero */}
       <section className="pt-[76px]">
         <div className="w-full h-[50vh] min-h-[350px] max-h-[600px] overflow-hidden">
@@ -70,9 +77,10 @@ export function Services() {
           <h1 className="font-cormorant text-[2.5rem] md:text-[3.5rem] font-light text-charcoal leading-[1.15]">
             Our Services
           </h1>
-          <p className="font-body text-warm-gray text-[0.9375rem] leading-relaxed mt-5">
-            From intimate gatherings to grand celebrations, we offer comprehensive
-            event planning tailored to your vision.
+          <p className="font-body text-taupe text-[0.9375rem] leading-relaxed mt-5">
+            At You're Invited, we handle the details so you can enjoy the celebration.
+            From big-picture planning to the finishing touches, our services are designed
+            to keep your event polished, personal, and stress-free.
           </p>
         </div>
       </section>
@@ -86,6 +94,7 @@ export function Services() {
         </div>
       </section>
 
+      <FAQ />
       <ContactCta />
     </>
   )

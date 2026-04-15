@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom'
 
 const heroImages = [
   {
-    src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=85',
+    src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=2400&q=90',
     alt: 'Luxury gala dining experience with candlelight',
   },
   {
-    src: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1920&q=85',
-    alt: 'Grand celebration venue with elegant chandeliers',
+    src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=2400&q=90',
+    alt: 'Stunning wedding ceremony arch with cascading flowers and warm golden light',
   },
   {
-    src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=85',
-    alt: 'Sophisticated corporate event with stage lighting',
+    src: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=2400&q=90',
+    alt: 'Keynote speaker on stage at an elegant corporate event with engaged audience',
   },
 ]
 
@@ -28,9 +28,9 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="pt-[76px] bg-white">
-      <div className="max-w-[1200px] mx-auto px-6 lg:px-12 py-6 md:py-10">
-        <div className="relative overflow-hidden h-[70vh] min-h-[450px] max-h-[700px]">
+    <section className="pt-[76px] bg-light-warm">
+      <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-4 md:py-6">
+      <div className="relative overflow-hidden h-[82vh] min-h-[500px]">
           {/* Background images — crossfade */}
           <AnimatePresence mode="sync">
             <motion.img
@@ -49,21 +49,21 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/15" />
 
           {/* Content */}
-          <div className="relative z-10 h-full flex items-end p-8 md:p-12">
-            <div>
+          <div className="relative z-10 h-full flex items-end">
+            <div className="max-w-[1400px] mx-auto w-full px-8 md:px-16 pb-10 md:pb-14">
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <div className="h-[1px] w-14 bg-gold mb-5" />
+                <div className="h-[1px] w-14 bg-sage mb-5" />
                 <h1 className="font-cormorant text-[2.25rem] sm:text-[3rem] md:text-[3.75rem] font-light text-white leading-[1.1] max-w-[600px]">
-                  Fort Lauderdale's Premier{' '}
-                  <span className="italic text-gold">Event Planners</span>
+                  Designed to Impress.{' '}
+                  <span className="italic text-sage">Planned to Perfection.</span>
                 </h1>
                 <p className="font-body text-white/85 text-[0.9375rem] mt-4 max-w-[440px] leading-relaxed">
-                  Every celebration, perfectly yours. Crafting unforgettable moments
-                  with warmth, elegance, and South Florida soul.
+                  South Florida flair. Thoughtful details. Unforgettable events.
+                  Custom invitations and event planning that feel personal, polished, and completely you.
                 </p>
                 <div className="flex flex-wrap gap-3 mt-7">
                   <Link
@@ -74,7 +74,7 @@ export function Hero() {
                   </Link>
                   <Link
                     to="/contact"
-                    className="font-body text-[0.75rem] tracking-[0.12em] uppercase bg-gold text-white px-6 py-2.5 hover:bg-gold-dark transition-colors duration-300"
+                    className="font-body text-[0.75rem] tracking-[0.12em] uppercase bg-sage text-white px-6 py-2.5 hover:bg-sage-dark transition-colors duration-300"
                   >
                     Plan Your Event
                   </Link>
@@ -88,7 +88,7 @@ export function Hero() {
                     key={i}
                     onClick={() => setCurrent(i)}
                     className={`transition-all duration-500 ${
-                      i === current ? 'w-7 h-[2px] bg-gold' : 'w-4 h-[2px] bg-white/40 hover:bg-white/60'
+                      i === current ? 'w-7 h-[2px] bg-sage' : 'w-4 h-[2px] bg-white/40 hover:bg-white/60'
                     }`}
                     aria-label={`Image ${i + 1}`}
                   />
@@ -96,7 +96,7 @@ export function Hero() {
               </div>
             </div>
           </div>
-        </div>
+      </div>
       </div>
     </section>
   )

@@ -5,15 +5,15 @@ async function seed() {
   console.log('Seeding database...')
 
   // Clear existing data
-  db.delete(inquiries).run()
-  db.delete(admins).run()
+  await db.delete(inquiries)
+  await db.delete(admins)
 
   // Seed admin user
   const passwordHash = await bcrypt.hash('admin123', 10)
-  db.insert(admins).values({
+  await db.insert(admins).values({
     username: 'admin',
     passwordHash,
-  }).run()
+  })
   console.log('Created admin user (admin / admin123)')
 
   // Seed sample inquiries
@@ -80,9 +80,7 @@ async function seed() {
     },
   ]
 
-  for (const inquiry of sampleInquiries) {
-    db.insert(inquiries).values(inquiry).run()
-  }
+  await db.insert(inquiries).values(sampleInquiries)
   console.log(`Seeded ${sampleInquiries.length} sample inquiries`)
 
   console.log('Database seeded successfully!')

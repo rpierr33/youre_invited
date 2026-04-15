@@ -37,9 +37,11 @@ export function Navbar() {
           <div className="flex items-center justify-between h-[76px]">
             {/* Logo */}
             <Link to="/">
-              <span className={`font-cormorant text-[1.625rem] font-medium tracking-[0.04em] transition-colors duration-300 ${textClass}`}>
-                You're Invited
-              </span>
+              <img
+                src="/logo/logo-nav.png"
+                alt="You're Invited Events"
+                className="h-[4.5rem] w-auto"
+              />
             </Link>
 
             {/* Desktop Nav */}
@@ -50,19 +52,19 @@ export function Navbar() {
                   to={link.to}
                   className={`font-body text-[0.8125rem] tracking-[0.04em] transition-all duration-300 relative group ${
                     location.pathname === link.to
-                      ? 'text-gold'
+                      ? 'text-sage'
                       : `${textClass} hover:opacity-70`
                   }`}
                 >
                   {link.label}
                   {location.pathname === link.to && (
-                    <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-gold" />
+                    <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-sage" />
                   )}
                 </Link>
               ))}
               <Link
                 to="/contact"
-                className="ml-2 font-body text-[0.75rem] tracking-[0.1em] uppercase bg-gold text-white px-5 py-2 hover:bg-gold-dark transition-colors duration-300"
+                className="ml-2 font-body text-[0.75rem] tracking-[0.1em] uppercase bg-sage text-white px-5 py-2 hover:bg-sage-dark transition-colors duration-300"
               >
                 Plan Your Event
               </Link>
@@ -113,6 +115,8 @@ export function Navbar() {
               </svg>
             </button>
 
+            <img src="/logo/logo-full.png" alt="You're Invited Events" className="h-20 w-auto mb-6" />
+
             <div className="flex flex-col items-center gap-7">
               {navLinks.map((link, i) => (
                 <motion.div
@@ -124,7 +128,7 @@ export function Navbar() {
                   <Link
                     to={link.to}
                     className={`font-cormorant text-2xl font-light ${
-                      location.pathname === link.to ? 'text-gold' : 'text-charcoal'
+                      location.pathname === link.to ? 'text-sage' : 'text-charcoal'
                     }`}
                   >
                     {link.label}
@@ -139,7 +143,7 @@ export function Navbar() {
               >
                 <Link
                   to="/contact"
-                  className="font-body text-[0.75rem] tracking-[0.1em] uppercase bg-gold text-white px-8 py-3 hover:bg-gold-dark transition-colors"
+                  className="font-body text-[0.75rem] tracking-[0.1em] uppercase bg-sage text-white px-8 py-3 hover:bg-sage-dark transition-colors"
                 >
                   Plan Your Event
                 </Link>

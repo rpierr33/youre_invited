@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { SEO } from '../components/SEO'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import { testimonials } from '../lib/data'
 import { ContactCta } from '../components/sections/ContactCta'
@@ -20,7 +21,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: typeof testimoni
         </p>
         <div className="mt-6 flex items-center gap-3">
           <div className="h-[1px] w-8 bg-border" />
-          <p className="font-body text-[0.75rem] tracking-[0.12em] uppercase text-warm-gray">
+          <p className="font-body text-[0.75rem] tracking-[0.12em] uppercase text-taupe">
             {testimonial.name}, {testimonial.eventType}
           </p>
         </div>
@@ -32,13 +33,18 @@ function TestimonialCard({ testimonial, index }: { testimonial: typeof testimoni
 export function Testimonials() {
   return (
     <>
+      <SEO
+        title="Client Reviews | Event Planning Testimonials Fort Lauderdale | You're Invited"
+        description="Read what our clients say about working with You're Invited. Real reviews from weddings, birthday celebrations, bridal showers, and events planned in South Florida."
+        path="/testimonials"
+      />
       {/* Header */}
       <section className="pt-[76px]">
         <div className="py-20 bg-white text-center">
           <h1 className="font-cormorant text-[2.5rem] md:text-[3.5rem] font-light text-charcoal leading-[1.15]">
             Kind Words
           </h1>
-          <p className="font-body text-warm-gray text-[0.9375rem] leading-relaxed mt-5">
+          <p className="font-body text-taupe text-[0.9375rem] leading-relaxed mt-5">
             Stories from the celebrations we've been honored to create.
           </p>
         </div>

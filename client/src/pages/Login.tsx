@@ -35,8 +35,8 @@ export function Login() {
         className="w-full max-w-sm"
       >
         <div className="text-center mb-12">
-          <h1 className="font-cormorant text-3xl font-light text-charcoal">YOU'RE INVITED</h1>
-          <p className="font-body text-[0.75rem] tracking-[0.12em] uppercase text-warm-gray mt-3">Admin</p>
+          <img src="/logo/logo-full.png" alt="You're Invited Events" className="h-24 w-auto mx-auto" />
+          <p className="font-body text-[0.75rem] tracking-[0.12em] uppercase text-taupe mt-4">Admin</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
