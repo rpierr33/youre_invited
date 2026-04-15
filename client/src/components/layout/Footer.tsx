@@ -7,7 +7,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <img src="/logo/logo-nav.png" alt="You're Invited Events" className="h-14 w-auto brightness-0 invert" />
+            <img
+              src="/logo/logo-nav.png"
+              alt="You're Invited Events"
+              className="h-[4.5rem] w-auto mix-blend-screen"
+              style={{ filter: 'invert(1) sepia(0.3)' }}
+            />
             <p className="font-body text-[0.8125rem] text-white/40 mt-3 leading-relaxed">
               South Florida event planning & custom invitation studio. Designed to impress. Planned to perfection.
             </p>

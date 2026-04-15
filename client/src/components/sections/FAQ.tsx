@@ -95,7 +95,7 @@ export function FAQ() {
   const { ref, isVisible } = useIntersectionObserver()
 
   return (
-    <section ref={ref} className="py-24 bg-white">
+    <section ref={ref} className="py-24 bg-warm-tan">
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(faqStructuredData)}</script>
       </Helmet>

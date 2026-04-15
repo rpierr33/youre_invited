@@ -30,7 +30,7 @@ export function Gallery() {
       />
       {/* Header */}
       <section className="pt-[76px]">
-        <div className="py-20 bg-white text-center">
+        <div className="py-20 bg-warm-tan text-center">
           <div className="max-w-[700px] mx-auto px-6">
             <h1 className="font-cormorant text-[2.5rem] md:text-[3.5rem] font-light text-charcoal leading-[1.15]">
               Gallery
@@ -43,7 +43,7 @@ export function Gallery() {
       </section>
 
       {/* Filters + Gallery */}
-      <section className="pb-28 bg-white">
+      <section className="pb-28 bg-warm-tan">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
           {/* Filter buttons */}
           <div className="flex flex-wrap justify-center gap-6 mb-14">

@@ -40,7 +40,7 @@ export function Testimonials() {
       />
       {/* Header */}
       <section className="pt-[76px]">
-        <div className="py-20 bg-white text-center">
+        <div className="py-20 bg-warm-tan text-center">
           <h1 className="font-cormorant text-[2.5rem] md:text-[3.5rem] font-light text-charcoal leading-[1.15]">
             Kind Words
           </h1>
@@ -51,7 +51,7 @@ export function Testimonials() {
       </section>
 
       {/* Testimonials */}
-      <section className="pb-12 bg-white">
+      <section className="pb-12 bg-warm-tan">
         <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
           {testimonials.map((testimonial, i) => (
             <TestimonialCard key={testimonial.id} testimonial={testimonial} index={i} />

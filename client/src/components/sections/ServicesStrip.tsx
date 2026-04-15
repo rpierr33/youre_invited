@@ -13,7 +13,7 @@ export function ServicesStrip() {
   const { ref, isVisible } = useIntersectionObserver()
 
   return (
-    <section ref={ref} className="py-20 md:py-24 bg-white">
+    <section ref={ref} className="py-20 md:py-24 bg-warm-tan">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
         {/* Header */}
         <motion.div

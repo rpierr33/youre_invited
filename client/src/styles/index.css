@@ -12,7 +12,8 @@
   --forest: #212721;
   --charcoal: #2D2A1F;
   --taupe: #B4AC9F;
-  --light-warm: #F9F6F2;
+  --warm-tan: #EDE4D3;
+  --light-warm: #F5ECDE;
   --surface: #FDFCFA;
   --surface-warm: #F5F0E7;
   --border: #E2DED9;
@@ -64,11 +65,11 @@ body {
   .masonry-grid { columns: 1; }
 }
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #fff; }
-::-webkit-scrollbar-thumb { background: #d4d0cc; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #b0aca7; }
+/* Scrollbar — muted sage gray to tie with logo wave accent */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--light-warm); }
+::-webkit-scrollbar-thumb { background: #b5c4b2; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #95a793; }
 
 /* Drop cap */
 .drop-cap::first-letter {
@@ -123,5 +124,5 @@ body {
 
 /* Subtle warm section bg */
 .bg-warm {
-  background-color: var(--light-warm);
+  background-color: var(--warm-tan);
 }

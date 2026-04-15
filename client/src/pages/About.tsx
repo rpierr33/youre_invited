@@ -72,7 +72,7 @@ export function About() {
       </section>
 
       {/* Founder Bio */}
-      <section ref={bioRef} className="py-28 bg-white">
+      <section ref={bioRef} className="py-28 bg-warm-tan">
         <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <motion.div
@@ -167,7 +167,7 @@ export function About() {
       </section>
 
       {/* The Process */}
-      <section ref={processRef} className="py-28 bg-white">
+      <section ref={processRef} className="py-28 bg-warm-tan">
         <div className="max-w-[900px] mx-auto px-6 lg:px-12">
           <motion.h2
             initial={{ opacity: 0, y: 15 }}

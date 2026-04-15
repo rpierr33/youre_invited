@@ -14,7 +14,7 @@ export function FloatingContact() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="mb-3 bg-white shadow-xl border border-border rounded-lg overflow-hidden w-56"
+            className="mb-3 bg-light-warm shadow-xl border border-border rounded-lg overflow-hidden w-56"
           >
             <div className="p-4">
               <p className="font-cormorant text-lg text-charcoal mb-3">Let's connect</p>

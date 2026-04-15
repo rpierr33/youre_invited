@@ -74,7 +74,7 @@ export function Services() {
       </section>
 
       {/* Title */}
-      <section className="py-20 bg-white text-center">
+      <section className="py-20 bg-warm-tan text-center">
         <div className="max-w-[700px] mx-auto px-6">
           <h1 className="font-cormorant text-[2.5rem] md:text-[3.5rem] font-light text-charcoal leading-[1.15]">
             Our Services
@@ -88,7 +88,7 @@ export function Services() {
       </section>
 
       {/* Services List */}
-      <section className="pb-28 bg-white">
+      <section className="pb-28 bg-warm-tan">
         <div className="max-w-[1100px] mx-auto px-6 lg:px-12 space-y-28">
           {services.map((service, i) => (
             <ServiceCard key={service.id} service={service} index={i} />

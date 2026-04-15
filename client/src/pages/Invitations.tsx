@@ -135,7 +135,7 @@ export function Invitations() {
       </section>
 
       {/* Intro */}
-      <section ref={introRef} className="py-20 bg-white">
+      <section ref={introRef} className="py-20 bg-warm-tan">
         <div className="max-w-[800px] mx-auto px-6 lg:px-12 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -157,7 +157,7 @@ export function Invitations() {
       </section>
 
       {/* Invitation Types */}
-      <section className="pb-24 bg-white">
+      <section className="pb-24 bg-warm-tan">
         <div className="max-w-[1100px] mx-auto px-6 lg:px-12 space-y-24">
           {invitationTypes.map((item, i) => (
             <InvitationCard key={item.id} item={item} index={i} />
@@ -194,7 +194,7 @@ export function Invitations() {
 
           {/* Booking Section */}
           <div className="max-w-[800px] mx-auto">
-            <div className="bg-white p-8 md:p-12">
+            <div className="bg-light-warm p-8 md:p-12">
               <h3 className="font-cormorant text-[1.75rem] font-light text-charcoal text-center mb-2">
                 Book a Workshop
               </h3>
@@ -279,7 +279,7 @@ export function Invitations() {
       </section>
 
       {/* Private & Group Training CTA */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-warm-tan">
         <div className="max-w-[900px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>

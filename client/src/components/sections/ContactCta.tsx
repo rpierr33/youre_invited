@@ -15,7 +15,7 @@ export function ContactCta() {
           alt=""
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-white/85" />
+        <div className="absolute inset-0 bg-warm-tan/90" />
       </div>
 
       <div className="relative z-10 max-w-[600px] mx-auto px-6 text-center">
