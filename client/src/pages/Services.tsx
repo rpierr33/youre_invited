@@ -97,6 +97,23 @@ export function Services() {
       </section>
 
       <FAQ />
+      <section className="py-16 bg-warm text-center">
+        <div className="max-w-[760px] mx-auto px-6">
+          <h2 className="font-cormorant text-[2rem] md:text-[2.5rem] font-light text-charcoal">
+            Planning Across South Florida
+          </h2>
+          <p className="font-body text-[0.9375rem] text-taupe leading-[1.8] mt-4 mb-7">
+            Based in Fort Lauderdale, we plan celebrations throughout Broward, Miami-Dade,
+            and Palm Beach counties.
+          </p>
+          <Link
+            to="/south-florida-service-area"
+            className="inline-flex items-center gap-3 font-body text-[0.75rem] tracking-[0.15em] uppercase text-charcoal border-b border-charcoal pb-1 hover:opacity-50 transition-opacity"
+          >
+            Explore Our Service Area <span>&rarr;</span>
+          </Link>
+        </div>
+      </section>
       <ContactCta />
     </>
   )

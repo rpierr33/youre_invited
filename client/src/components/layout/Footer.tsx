@@ -26,6 +26,7 @@ export function Footer() {
                 { path: '/', label: 'Home' },
                 { path: '/about', label: 'About' },
                 { path: '/services', label: 'Services' },
+                { path: '/south-florida-service-area', label: 'Service Area' },
                 { path: '/invitations', label: 'Invitations' },
                 { path: '/gallery', label: 'Gallery' },
                 { path: '/testimonials', label: 'Testimonials' },

@@ -14,6 +14,7 @@ const Gallery = lazy(() => import('./pages/Gallery').then(m => ({ default: m.Gal
 const Testimonials = lazy(() => import('./pages/Testimonials').then(m => ({ default: m.Testimonials })))
 const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })))
 const Invitations = lazy(() => import('./pages/Invitations').then(m => ({ default: m.Invitations })))
+const ServiceArea = lazy(() => import('./pages/ServiceArea').then(m => ({ default: m.ServiceArea })))
 const Login = lazy(() => import('./pages/Login').then(m => ({ default: m.Login })))
 const Admin = lazy(() => import('./pages/Admin').then(m => ({ default: m.Admin })))
 const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })))
@@ -44,6 +45,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/invitations" element={<Invitations />} />
+                <Route path="/south-florida-service-area" element={<ServiceArea />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path="/contact" element={<Contact />} />

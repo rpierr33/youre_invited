@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: 'What areas do you serve in South Florida?',
-    answer: 'We\'re based in Fort Lauderdale and serve all of South Florida including Miami, Boca Raton, Coral Springs, Palm Beach, and surrounding areas. We also travel for destination events.',
+    answer: 'We\'re based in Fort Lauderdale and serve Broward, Miami-Dade, and Palm Beach counties, including Miami, Hollywood, Coral Springs, Boca Raton, Delray Beach, and West Palm Beach. We also travel for destination events.',
   },
   {
     question: 'What\'s the difference between full-service planning and day-of coordination?',

@@ -35,8 +35,9 @@ export function AboutSnippet() {
               <span className="italic text-sage">Great First Impression</span>
             </h2>
             <p className="font-body text-taupe text-[0.9375rem] leading-[1.8] mb-5">
-              I'm Noelle, the planner, designer, and detail-lover behind You're Invited — a South
-              Florida-based event planning and custom invitation studio. With over 12 years of experience
+              I'm Noelle, the planner, designer, and detail-lover behind You're Invited — a Fort
+              Lauderdale-based event planning and custom invitation studio serving Broward, Miami-Dade,
+              and Palm Beach counties. With over 12 years of experience
               working with DMCs and Fortune 500 companies, I bring both creative heart and
               corporate-level precision to every celebration.
             </p>

@@ -31,11 +31,13 @@ const structuredData = {
     longitude: -80.1373,
   },
   areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Broward County' },
+    { '@type': 'AdministrativeArea', name: 'Miami-Dade County' },
+    { '@type': 'AdministrativeArea', name: 'Palm Beach County' },
     { '@type': 'City', name: 'Fort Lauderdale' },
     { '@type': 'City', name: 'Miami' },
     { '@type': 'City', name: 'Boca Raton' },
     { '@type': 'City', name: 'Coral Springs' },
-    { '@type': 'State', name: 'Florida' },
   ],
   priceRange: '$$',
   openingHoursSpecification: {

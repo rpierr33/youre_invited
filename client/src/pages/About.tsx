@@ -94,8 +94,9 @@ export function About() {
               className="lg:pt-12"
             >
               <p className="font-cormorant text-[1.375rem] leading-[1.7] text-charcoal font-light drop-cap">
-                Hi! I'm Noelle, the planner, designer, and detail-lover behind You're Invited — a South
-                Florida-based event planning and custom invitation studio where celebrations come to life
+                Hi! I'm Noelle, the planner, designer, and detail-lover behind You're Invited — a Fort
+                Lauderdale-based event planning and custom invitation studio serving Broward, Miami-Dade,
+                and Palm Beach counties, where celebrations come to life
                 (and yes, the paper goods matter just as much as the party).
               </p>
               <p className="font-cormorant text-[1.375rem] leading-[1.7] text-charcoal font-light mt-6">
