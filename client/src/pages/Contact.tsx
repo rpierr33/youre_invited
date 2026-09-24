@@ -64,15 +64,15 @@ export function Contact() {
             <div className="mt-12 space-y-6 font-body text-[0.9375rem] text-taupe">
               <div>
                 <p className="text-[0.6875rem] tracking-[0.15em] uppercase text-taupe mb-1">Location</p>
-                <p className="text-charcoal">Fort Lauderdale, FL 33301</p>
+                <p className="text-charcoal">Fort Lauderdale, FL</p>
               </div>
               <div>
                 <p className="text-[0.6875rem] tracking-[0.15em] uppercase text-taupe mb-1">Phone</p>
-                <a href="tel:+19545550100" className="text-charcoal hover:opacity-50 transition-opacity">(954) 555-0100</a>
+                <a href="tel:+19547560681" className="text-charcoal hover:opacity-50 transition-opacity">954-756-0681</a>
               </div>
               <div>
                 <p className="text-[0.6875rem] tracking-[0.15em] uppercase text-taupe mb-1">Email</p>
-                <a href="mailto:hello@youreinvited.com" className="text-charcoal hover:opacity-50 transition-opacity">hello@youreinvited.com</a>
+                <a href="mailto:noelle@yisfl.com" className="text-charcoal hover:opacity-50 transition-opacity">noelle@yisfl.com</a>
               </div>
               <div className="flex gap-5 pt-4">
                 <a href="#" className="text-charcoal hover:opacity-50 transition-opacity" aria-label="Instagram">

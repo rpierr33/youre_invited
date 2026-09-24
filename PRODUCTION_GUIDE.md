@@ -109,7 +109,7 @@ Currently, the contact form saves inquiries to the database but does NOT send em
 ```env
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=hello@youreinvited.com
+SMTP_USER=noelle@yisfl.com
 SMTP_PASS=your-app-password
 ```
 

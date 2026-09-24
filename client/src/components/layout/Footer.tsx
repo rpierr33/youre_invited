@@ -58,9 +58,9 @@ export function Footer() {
           <div>
             <p className="font-body text-[0.6875rem] tracking-[0.15em] uppercase text-white/30 mb-4">Contact</p>
             <div className="flex flex-col gap-2.5 font-body text-[0.8125rem] text-white/60">
-              <p>Fort Lauderdale, FL 33301</p>
-              <a href="tel:+19545550100" className="hover:text-sage transition-colors">(954) 555-0100</a>
-              <a href="mailto:hello@youreinvited.com" className="hover:text-sage transition-colors">hello@youreinvited.com</a>
+              <p>Fort Lauderdale, FL</p>
+              <a href="tel:+19547560681" className="hover:text-sage transition-colors">954-756-0681</a>
+              <a href="mailto:noelle@yisfl.com" className="hover:text-sage transition-colors">noelle@yisfl.com</a>
             </div>
             <div className="flex gap-4 mt-5">
               <a href="#" className="text-white/40 hover:text-sage transition-colors" aria-label="Instagram">
