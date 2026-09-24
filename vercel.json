@@ -3,6 +3,20 @@
   "outputDirectory": "client/dist",
   "installCommand": "npm install",
   "framework": null,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.yisfl.com" }],
+      "destination": "https://yisfl.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "youreinvited-three.vercel.app" }],
+      "destination": "https://yisfl.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api" }
   ]

@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /admin/login
 
-Sitemap: https://youreinvited-three.vercel.app/sitemap.xml
+Sitemap: https://yisfl.com/sitemap.xml

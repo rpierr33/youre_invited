@@ -8,7 +8,7 @@ interface SEOProps {
   image?: string
 }
 
-const SITE_URL = 'https://youreinvited-three.vercel.app'
+const SITE_URL = 'https://yisfl.com'
 const SITE_NAME = "You're Invited"
 const DEFAULT_OG_IMAGE = 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&h=630&fit=crop&q=80'
 

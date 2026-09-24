@@ -13,10 +13,10 @@ import { ContactCta } from '../components/sections/ContactCta'
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://youreinvited-three.vercel.app',
+  '@id': 'https://yisfl.com',
   name: "You're Invited",
   description: "South Florida event planning and custom invitation studio. Custom invitations, full-service event planning, day-of coordination, and event design for weddings, birthdays, bridal showers, and milestone celebrations in Fort Lauderdale.",
-  url: 'https://youreinvited-three.vercel.app',
+  url: 'https://yisfl.com',
   telephone: '+19547560681',
   email: 'noelle@yisfl.com',
   address: {

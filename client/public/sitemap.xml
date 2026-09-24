@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://youreinvited-three.vercel.app/</loc>
+    <loc>https://yisfl.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://youreinvited-three.vercel.app/about</loc>
+    <loc>https://yisfl.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://youreinvited-three.vercel.app/services</loc>
+    <loc>https://yisfl.com/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://youreinvited-three.vercel.app/invitations</loc>
+    <loc>https://yisfl.com/invitations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://youreinvited-three.vercel.app/gallery</loc>
+    <loc>https://yisfl.com/gallery</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://youreinvited-three.vercel.app/testimonials</loc>
+    <loc>https://yisfl.com/testimonials</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://youreinvited-three.vercel.app/contact</loc>
+    <loc>https://yisfl.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
