@@ -6,15 +6,15 @@ import { ContactCta } from '../components/sections/ContactCta'
 const values = [
   {
     title: 'Personal Touch',
-    description: 'Every event begins with understanding you. I listen to your vision, your story, and your style — then I craft a celebration that feels authentically yours.',
+    description: 'Every event begins with understanding you. We listen to your vision, your story, and your style — then shape a celebration that feels authentically yours.',
   },
   {
     title: 'Design-First Approach',
-    description: 'I don\'t just plan events — I design the entire experience, beginning with invitations that get guests excited before they even RSVP.',
+    description: 'We design the entire experience together, beginning with invitations that get guests excited before they even RSVP.',
   },
   {
     title: 'Seamless Execution',
-    description: 'Behind every effortless celebration is someone who sweats every detail. From timeline management to vendor coordination, I handle it all so you can actually enjoy the process.',
+    description: 'Behind every effortless celebration is a team working through every detail. From timelines to vendor coordination, we keep the moving pieces aligned so you can enjoy the process.',
   },
 ]
 
@@ -37,12 +37,12 @@ const processSteps = [
   {
     number: '04',
     title: 'Print, Prep & Perfect',
-    description: 'Your invitations are professionally printed, your details are finalized, and every element is reviewed with a fine-tooth comb. Nothing slips through the cracks on my watch.',
+    description: 'Your invitations are professionally printed, your details are finalized, and every element is carefully reviewed by our team before event day.',
   },
   {
     number: '05',
     title: 'Execute & Celebrate',
-    description: 'Event day arrives, and I take it from here. I manage the timeline, vendors, and flow so you can relax, celebrate, and enjoy every moment.',
+    description: 'Event day arrives, and our team takes it from here. We manage the timeline, vendors, setup, and flow so you can relax and enjoy every moment.',
   },
 ]
 
@@ -55,8 +55,8 @@ export function About() {
   return (
     <>
       <SEO
-        title="About Noelle | You're Invited Event Planner Fort Lauderdale FL"
-        description="Meet Noelle — 12+ years of event planning experience working with DMCs and Fortune 500 companies. You're Invited is a South Florida event planning and custom invitation studio where celebrations come to life with personality, precision, and just the right amount of sparkle."
+        title="About Our Event Planning Team | You're Invited Fort Lauderdale"
+        description="Meet the collaborative team behind You're Invited, a Fort Lauderdale event planning and custom invitation studio serving South Florida with creative direction, thoughtful design, and precise execution."
         path="/about"
       />
       {/* Hero Image */}
@@ -71,10 +71,10 @@ export function About() {
         </div>
       </section>
 
-      {/* Founder Bio */}
+      {/* Team Story */}
       <section ref={bioRef} className="py-28 bg-warm-tan">
-        <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-14 lg:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0 }}
               animate={bioVisible ? { opacity: 1 } : {}}
@@ -82,36 +82,38 @@ export function About() {
             >
               <img
                 loading="lazy"
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
-                alt="Noelle, founder of You're Invited"
-                className="w-full aspect-[3/4] object-cover"
+                src="/images/about-event-team.jpg"
+                alt="Event planning team collaborating on invitations, florals, layouts, and event details"
+                className="w-full aspect-[4/3] object-cover"
               />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={bioVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:pt-12"
+              className="lg:py-8"
             >
-              <p className="font-cormorant text-[1.375rem] leading-[1.7] text-charcoal font-light drop-cap">
-                Hi! I'm Noelle, the planner, designer, and detail-lover behind You're Invited — a Fort
-                Lauderdale-based event planning and custom invitation studio serving Broward, Miami-Dade,
-                and Palm Beach counties, where celebrations come to life
-                (and yes, the paper goods matter just as much as the party).
+              <p className="font-body text-[0.6875rem] tracking-[0.18em] uppercase text-sage-dark mb-4">
+                The Team Behind the Details
               </p>
-              <p className="font-cormorant text-[1.375rem] leading-[1.7] text-charcoal font-light mt-6">
-                With over 12 years of experience — from planning personal celebrations to working in and
-                with Destination Management Companies and producing events for Fortune 500 clients — I bring
-                a rare mix of corporate precision and creative heart to every project. That depth of experience
-                means I've seen it all, planned it all, and know exactly how to make your vision come to life.
+              <h1 className="font-cormorant text-[2.25rem] md:text-[2.75rem] leading-[1.15] text-charcoal font-light mb-7">
+                Great events come together through collaboration.
+              </h1>
+              <p className="font-cormorant text-[1.25rem] leading-[1.7] text-charcoal font-light">
+                You're Invited is a Fort Lauderdale-based event planning and custom invitation studio led
+                by Noelle and supported by a collaborative team of creative and production professionals.
+                Together, we serve Broward, Miami-Dade, and Palm Beach counties with the people and planning
+                needed to bring every detail into place.
               </p>
-              <p className="font-cormorant text-[1.375rem] leading-[1.7] text-charcoal font-light mt-6">
-                I believe great events start with a great first impression. That's why I don't just plan
-                events — I design the entire experience, beginning with invitations that get guests excited
-                before they even RSVP. I'm known for my love of details, color palettes, timelines, and
-                those "wow, this feels so me" moments. Whether you're celebrating a birthday, bridal shower,
-                wedding, or milestone moment, my goal is to make the process feel fun, stress-free, and
-                completely personalized.
+              <p className="font-cormorant text-[1.25rem] leading-[1.7] text-charcoal font-light mt-6">
+                Noelle brings more than 12 years of experience spanning personal celebrations, Destination
+                Management Companies, and Fortune 500 events. That leadership gives the team a clear creative
+                direction and a calm, organized process from the first conversation through event day.
+              </p>
+              <p className="font-cormorant text-[1.25rem] leading-[1.7] text-charcoal font-light mt-6">
+                From invitations and color palettes to vendor coordination, setup, and timelines, each person
+                contributes to one shared vision. The result is a celebration that feels personal and polished,
+                with a team working behind the scenes so you can stay present for it.
               </p>
             </motion.div>
           </div>
@@ -148,7 +150,7 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="font-cormorant text-[2.5rem] font-light text-charcoal mb-16 text-center"
           >
-            My Approach
+            Our Approach
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {values.map((value, i) => (

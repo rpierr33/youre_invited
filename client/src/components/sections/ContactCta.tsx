@@ -26,7 +26,7 @@ export function ContactCta() {
         >
           <div className="sage-rule mx-auto mb-6" />
           <h2 className="font-cormorant text-[2rem] md:text-[2.75rem] font-light text-charcoal leading-[1.2]">
-            You bring the reason to celebrate. <span className="italic text-sage">I'll handle the rest.</span>
+            You bring the reason to celebrate. <span className="italic text-sage">We'll handle the rest.</span>
           </h2>
           <p className="font-body text-taupe text-[0.9375rem] leading-relaxed mt-5 mb-9">
             Ready to create something memorable (and have a little fun along the way)? You're in the right place.
