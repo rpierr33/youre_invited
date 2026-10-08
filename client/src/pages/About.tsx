@@ -56,7 +56,7 @@ export function About() {
     <>
       <SEO
         title="About Our Event Planning Team | You're Invited Fort Lauderdale"
-        description="Meet the collaborative team behind You're Invited, a Fort Lauderdale event planning and custom invitation studio serving South Florida with creative direction, thoughtful design, and precise execution."
+        description="Meet Noelle, consulting lead of You're Invited, and the collaborative team that carries her creative direction through planning, design, coordination, and event-day execution."
         path="/about"
       />
       {/* Hero Image */}
@@ -100,20 +100,21 @@ export function About() {
                 Great events come together through collaboration.
               </h1>
               <p className="font-cormorant text-[1.25rem] leading-[1.7] text-charcoal font-light">
-                You're Invited is a Fort Lauderdale-based event planning and custom invitation studio led
-                by Noelle and supported by a collaborative team of creative and production professionals.
-                Together, we serve Broward, Miami-Dade, and Palm Beach counties with the people and planning
-                needed to bring every detail into place.
+                You're Invited is a Fort Lauderdale-based event planning and custom invitation studio serving
+                Broward, Miami-Dade, and Palm Beach counties. Noelle serves as the team's consulting and
+                creative lead: she listens to the client's vision, defines the direction, and gives the team
+                the clear brief and priorities needed to move every detail forward.
               </p>
               <p className="font-cormorant text-[1.25rem] leading-[1.7] text-charcoal font-light mt-6">
-                Noelle brings more than 12 years of experience spanning personal celebrations, Destination
-                Management Companies, and Fortune 500 events. That leadership gives the team a clear creative
-                direction and a calm, organized process from the first conversation through event day.
+                While continuing her full-time career in corporate event planning, Noelle contributes more
+                than 12 years of experience spanning Destination Management Companies, Fortune 500 events,
+                and personal celebrations. Her role is focused on consultation, strategy, and creative
+                oversight, giving the team its marching orders and the client a consistent point of view.
               </p>
               <p className="font-cormorant text-[1.25rem] leading-[1.7] text-charcoal font-light mt-6">
-                From invitations and color palettes to vendor coordination, setup, and timelines, each person
-                contributes to one shared vision. The result is a celebration that feels personal and polished,
-                with a team working behind the scenes so you can stay present for it.
+                From there, the planning and production team carries that direction through invitations,
+                color palettes, vendor coordination, setup, timelines, and event-day execution. The result is
+                one shared vision, thoughtfully directed and brought to life by people working together.
               </p>
             </motion.div>
           </div>

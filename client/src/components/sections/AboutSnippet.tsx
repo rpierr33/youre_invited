@@ -35,17 +35,15 @@ export function AboutSnippet() {
               <span className="italic text-sage">Great First Impression</span>
             </h2>
             <p className="font-body text-taupe text-[0.9375rem] leading-[1.8] mb-5">
-              I'm Noelle, the planner, designer, and detail-lover behind You're Invited — a Fort
-              Lauderdale-based event planning and custom invitation studio serving Broward, Miami-Dade,
-              and Palm Beach counties. With over 12 years of experience
-              working with DMCs and Fortune 500 companies, I bring both creative heart and
-              corporate-level precision to every celebration.
+              Noelle is the consulting and creative lead behind You're Invited, a Fort Lauderdale-based
+              event planning and custom invitation studio serving Broward, Miami-Dade, and Palm Beach
+              counties. Drawing on more than 12 years of experience with DMCs and Fortune 500 companies,
+              she sets the vision, priorities, and standards that guide every celebration.
             </p>
             <p className="font-body text-taupe text-[0.9375rem] leading-[1.8] mb-8">
-              Inspired by South Florida's vibrant energy and laid-back elegance, I mix creativity
-              with organization to create events that are stylish, seamless, and full of heart.
-              No cookie-cutter designs here — every invitation, every event, and every detail
-              is tailored to your vision and your story.
+              While Noelle continues her full-time career in corporate event planning, the You're Invited
+              team carries her direction through design, vendor coordination, production, and event-day
+              execution. Every invitation, event, and detail is shaped around your vision and story.
             </p>
             <Link
               to="/about"
