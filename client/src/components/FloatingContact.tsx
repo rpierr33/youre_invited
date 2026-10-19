@@ -27,7 +27,7 @@ export function FloatingContact() {
                   Call Us
                 </a>
                 <a
-                  href="https://wa.me/19547560681?text=Hi%20Noelle!%20I'm%20interested%20in%20learning%20more%20about%20your%20event%20planning%20services."
+                  href="https://wa.me/19547560681?text=Hi!%20I'm%20interested%20in%20learning%20more%20about%20your%20event%20planning%20services."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 font-body text-[0.8125rem] text-charcoal hover:text-sage transition-colors py-1.5"

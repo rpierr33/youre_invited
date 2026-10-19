@@ -32,7 +32,7 @@ const structuredData = {
     name: "You're Invited",
     url: 'https://yisfl.com',
     telephone: '+19547560681',
-    email: 'noelle@yisfl.com',
+    email: 'youreinvitedai@gmail.com',
   },
   areaServed: counties.map(({ name }) => ({ '@type': 'AdministrativeArea', name })),
 }

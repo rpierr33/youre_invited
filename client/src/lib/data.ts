@@ -80,9 +80,9 @@ export const testimonials: Testimonial[] = [
 
 export const teamMembers: TeamMember[] = [
   {
-    name: 'Noelle',
-    title: 'Founder, Planner & Designer',
-    bio: 'The creative heart behind You\'re Invited. Noelle is a planner, designer, and detail-lover who believes great events start with a great first impression. Inspired by South Florida\'s vibrant energy and laid-back elegance, she mixes creativity with organization to create events that are stylish, seamless, and full of heart.',
+    name: "You're Invited Team",
+    title: 'Planning, Design & Production',
+    bio: 'A collaborative South Florida event team that believes great events start with a great first impression. We combine creative direction, careful organization, and polished production to create celebrations that feel stylish, seamless, and full of heart.',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
   },
 ]

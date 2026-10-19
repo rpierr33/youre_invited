@@ -18,7 +18,7 @@ const structuredData = {
   description: "South Florida event planning and custom invitation studio. Custom invitations, full-service event planning, day-of coordination, and event design for weddings, birthdays, bridal showers, and milestone celebrations in Fort Lauderdale.",
   url: 'https://yisfl.com',
   telephone: '+19547560681',
-  email: 'noelle@yisfl.com',
+  email: 'youreinvitedai@gmail.com',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Fort Lauderdale',

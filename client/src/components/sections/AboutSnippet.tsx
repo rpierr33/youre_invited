@@ -35,21 +35,21 @@ export function AboutSnippet() {
               <span className="italic text-sage">Great First Impression</span>
             </h2>
             <p className="font-body text-taupe text-[0.9375rem] leading-[1.8] mb-5">
-              Noelle is the consulting and creative lead behind You're Invited, a Fort Lauderdale-based
-              event planning and custom invitation studio serving Broward, Miami-Dade, and Palm Beach
-              counties. Drawing on more than 12 years of experience with DMCs and Fortune 500 companies,
-              she sets the vision, priorities, and standards that guide every celebration.
+              You're Invited is a Fort Lauderdale-based event planning and custom invitation studio serving
+              Broward, Miami-Dade, and Palm Beach counties. Drawing on more than 12 years of experience with
+              DMCs and Fortune 500 companies, our team sets a clear vision, priorities, and standards for
+              every celebration.
             </p>
             <p className="font-body text-taupe text-[0.9375rem] leading-[1.8] mb-8">
-              While Noelle continues her full-time career in corporate event planning, the You're Invited
-              team carries her direction through design, vendor coordination, production, and event-day
-              execution. Every invitation, event, and detail is shaped around your vision and story.
+              Our collaborative team carries that direction through design, vendor coordination, production,
+              and event-day execution. Every invitation, event, and detail is shaped around your vision and
+              story.
             </p>
             <Link
               to="/about"
               className="inline-flex items-center gap-3 font-body text-[0.75rem] tracking-[0.15em] uppercase text-charcoal border-b border-charcoal/30 pb-1 hover:border-sage hover:text-sage transition-all duration-300"
             >
-              Meet Noelle
+              Meet the Team
               <span>&rarr;</span>
             </Link>
           </motion.div>

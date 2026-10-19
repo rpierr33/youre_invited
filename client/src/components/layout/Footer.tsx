@@ -61,7 +61,7 @@ export function Footer() {
             <div className="flex flex-col gap-2.5 font-body text-[0.8125rem] text-white/60">
               <p>Fort Lauderdale, FL</p>
               <a href="tel:+19547560681" className="hover:text-sage transition-colors">954-756-0681</a>
-              <a href="mailto:noelle@yisfl.com" className="hover:text-sage transition-colors">noelle@yisfl.com</a>
+              <a href="mailto:youreinvitedai@gmail.com" className="hover:text-sage transition-colors">youreinvitedai@gmail.com</a>
             </div>
             <div className="flex gap-4 mt-5">
               <a href="#" className="text-white/40 hover:text-sage transition-colors" aria-label="Instagram">

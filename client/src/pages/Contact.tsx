@@ -57,7 +57,7 @@ export function Contact() {
               Get in Touch
             </h1>
             <p className="font-cormorant text-[1.375rem] leading-[1.7] text-charcoal font-light mt-8">
-              I'd love to hear about your vision. Whether you're planning a birthday, bridal shower,
+              We'd love to hear about your vision. Whether you're planning a birthday, bridal shower,
               wedding, or milestone celebration, let's make it unforgettable — and have a little fun along the way.
             </p>
 
@@ -72,7 +72,7 @@ export function Contact() {
               </div>
               <div>
                 <p className="text-[0.6875rem] tracking-[0.15em] uppercase text-taupe mb-1">Email</p>
-                <a href="mailto:noelle@yisfl.com" className="text-charcoal hover:opacity-50 transition-opacity">noelle@yisfl.com</a>
+                <a href="mailto:youreinvitedai@gmail.com" className="text-charcoal hover:opacity-50 transition-opacity">youreinvitedai@gmail.com</a>
               </div>
               <div className="flex gap-5 pt-4">
                 <a href="#" className="text-charcoal hover:opacity-50 transition-opacity" aria-label="Instagram">

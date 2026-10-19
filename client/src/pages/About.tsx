@@ -56,7 +56,7 @@ export function About() {
     <>
       <SEO
         title="About Our Event Planning Team | You're Invited Fort Lauderdale"
-        description="Meet Noelle, consulting lead of You're Invited, and the collaborative team that carries her creative direction through planning, design, coordination, and event-day execution."
+        description="Meet the collaborative You're Invited team bringing creative direction, planning, design, coordination, and event-day execution together for South Florida celebrations."
         path="/about"
       />
       {/* Hero Image */}
@@ -101,15 +101,14 @@ export function About() {
               </h1>
               <p className="font-cormorant text-[1.25rem] leading-[1.7] text-charcoal font-light">
                 You're Invited is a Fort Lauderdale-based event planning and custom invitation studio serving
-                Broward, Miami-Dade, and Palm Beach counties. Noelle serves as the team's consulting and
-                creative lead: she listens to the client's vision, defines the direction, and gives the team
-                the clear brief and priorities needed to move every detail forward.
+                Broward, Miami-Dade, and Palm Beach counties. Every project begins with listening carefully to
+                the client's vision, defining a clear creative direction, and giving each member of the team
+                the priorities needed to move every detail forward.
               </p>
               <p className="font-cormorant text-[1.25rem] leading-[1.7] text-charcoal font-light mt-6">
-                While continuing her full-time career in corporate event planning, Noelle contributes more
-                than 12 years of experience spanning Destination Management Companies, Fortune 500 events,
-                and personal celebrations. Her role is focused on consultation, strategy, and creative
-                oversight, giving the team its marching orders and the client a consistent point of view.
+                Our approach is informed by more than 12 years of experience spanning Destination Management
+                Companies, Fortune 500 events, and personal celebrations. Consultation, strategy, and creative
+                oversight keep the full team aligned and give every client a consistent point of view.
               </p>
               <p className="font-cormorant text-[1.25rem] leading-[1.7] text-charcoal font-light mt-6">
                 From there, the planning and production team carries that direction through invitations,
